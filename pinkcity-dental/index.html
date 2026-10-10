@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <title>Pinkcity Dental | Dental Care in Jaipur</title>
+  <meta name="description" content="Explore dental treatments at Pinkcity Dental in Jaipur. Call to discuss an appointment, treatment options, and indicative pricing." />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --ink:#102b42; --muted:#506b7d; --bg:#f6fbfe; --surface:#ffffff;
+      --surface-2:#e9f6fb; --line:#cfe3ec; --blue:#1376a3; --blue-deep:#07577d;
+      --aqua:#4fc6cb; --soft:#d9f4f2; --nav:rgba(246,251,254,.9);
+      --shadow:0 18px 50px rgba(13,69,95,.12); --shadow-sm:0 8px 24px rgba(13,69,95,.09);
+      --radius-lg:32px; --radius-md:20px; --radius-sm:12px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink:#eaf7fb; --muted:#a9c4cf; --bg:#071822; --surface:#0d2531; --surface-2:#11313e; --line:#214554; --blue:#6fc5e6; --blue-deep:#8bd5ef; --aqua:#65d9d3; --soft:#123a40; --nav:rgba(7,24,34,.9); --shadow:0 18px 50px rgba(0,0,0,.28); --shadow-sm:0 8px 24px rgba(0,0,0,.22); }
+    }
+    html[data-theme="light"] { color-scheme:light; --ink:#102b42; --muted:#506b7d; --bg:#f6fbfe; --surface:#ffffff; --surface-2:#e9f6fb; --line:#cfe3ec; --blue:#1376a3; --blue-deep:#07577d; --aqua:#4fc6cb; --soft:#d9f4f2; --nav:rgba(246,251,254,.9); --shadow:0 18px 50px rgba(13,69,95,.12); --shadow-sm:0 8px 24px rgba(13,69,95,.09); }
+    html[data-theme="dark"] { color-scheme:dark; --ink:#eaf7fb; --muted:#a9c4cf; --bg:#071822; --surface:#0d2531; --surface-2:#11313e; --line:#214554; --blue:#6fc5e6; --blue-deep:#8bd5ef; --aqua:#65d9d3; --soft:#123a40; --nav:rgba(7,24,34,.9); --shadow:0 18px 50px rgba(0,0,0,.28); --shadow-sm:0 8px 24px rgba(0,0,0,.22); }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6;overflow-x:hidden}
+    a{color:inherit}
+    button,a{ -webkit-tap-highlight-color:transparent }
+    .skip{position:fixed;left:12px;top:12px;transform:translateY(-180%);background:var(--surface);padding:10px 14px;z-index:100;border-radius:8px}.skip:focus{transform:translateY(0)}
+    .nav{position:sticky;top:0;z-index:20;background:var(--nav);backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in srgb,var(--line) 80%,transparent)}
+    .nav-inner{max-width:1160px;margin:auto;height:70px;padding:0 24px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-family:"Newsreader",serif;font-size:22px;font-weight:600;letter-spacing:-.02em;text-decoration:none;white-space:nowrap}.brand span{color:var(--blue)}
+    .nav-left{display:flex;align-items:center;gap:40px}.nav-links{display:flex;gap:26px;align-items:center;font-size:14px;font-weight:600}
+    .nav-links a{text-decoration:none;color:var(--muted)}.nav-links a:hover{color:var(--blue)}
+    .nav-actions{display:flex;gap:10px;align-items:center}
+    .theme{width:42px;height:42px;border:1px solid var(--line);background:var(--surface);border-radius:50%;color:var(--ink);display:grid;place-items:center;cursor:pointer}
+    .theme svg{width:20px;height:20px}.sun{display:none}html[data-theme="dark"] .sun{display:block}html[data-theme="dark"] .moon{display:none}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid transparent;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--blue);color:#fff;box-shadow:0 10px 24px color-mix(in srgb,var(--blue) 30%,transparent)}.btn-primary:hover{background:var(--blue-deep)}
+    html[data-theme="dark"] .btn-primary{color:#06202b}.btn-secondary{background:var(--surface);border-color:var(--line);color:var(--ink)}
+    .btn svg{width:18px;height:18px}
+    .hero{max-width:1160px;margin:auto;padding:76px 24px 70px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:70px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue-deep);font-weight:700;font-size:14px;margin-bottom:18px}.eyebrow:before{content:"";width:28px;height:2px;background:var(--aqua)}
+    h1,h2,h3{margin:0;line-height:1.08}.serif{font-family:"Newsreader",serif}
+    h1{font-family:"Newsreader",serif;font-size:clamp(46px,6.5vw,78px);font-weight:600;letter-spacing:-.045em;max-width:700px}
+    .hero-copy>p{font-size:18px;color:var(--muted);max-width:580px;margin:24px 0 30px}
+    .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+    .trust-row{display:flex;align-items:center;gap:24px;margin-top:34px;color:var(--muted);font-size:14px}.trust-item{display:flex;align-items:center;gap:8px}.trust-item svg{color:var(--blue);width:18px}
+    .visual{position:relative;min-height:520px;background:linear-gradient(145deg,var(--surface-2),var(--soft));border:1px solid var(--line);border-radius:50% 50% 40% 42% / 42% 44% 56% 58%;overflow:hidden;box-shadow:var(--shadow)}
+    .visual:before{content:"";position:absolute;width:180px;height:180px;border:36px solid color-mix(in srgb,var(--aqua) 25%,transparent);border-radius:50%;left:-66px;top:-30px}
+    .visual svg{position:absolute;inset:0;width:100%;height:100%}
+    .hero-note{position:absolute;z-index:3;right:-16px;bottom:36px;background:var(--surface);border:1px solid var(--line);padding:15px 18px;border-radius:16px;box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:12px;max-width:220px}.note-icon{width:38px;height:38px;background:var(--soft);border-radius:50%;display:grid;place-items:center;color:var(--blue-deep);font-weight:800}.hero-note strong{display:block;font-size:14px}.hero-note span{font-size:12px;color:var(--muted)}
+    .section{padding:90px 24px}.wrap{max-width:1160px;margin:auto}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}.section-head h2{font-family:"Newsreader",serif;font-size:clamp(38px,5vw,56px);letter-spacing:-.035em;max-width:630px}.section-head p{color:var(--muted);max-width:420px;margin:0}
+    .about{background:var(--surface)}.about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:72px;align-items:center}.about-art{position:relative;min-height:430px;border-radius:28px;background:var(--surface-2);border:1px solid var(--line);overflow:hidden}.about-art svg{width:100%;height:100%;position:absolute;inset:0}.about-copy h2{font-family:"Newsreader",serif;font-size:clamp(38px,5vw,58px);letter-spacing:-.035em}.about-copy>p{font-size:17px;color:var(--muted);margin:20px 0 28px}.principles{display:grid;grid-template-columns:1fr 1fr;gap:14px}.principle{padding:18px 0;border-top:1px solid var(--line)}.principle strong{display:block}.principle span{color:var(--muted);font-size:14px}
+    .treatment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.treatment{background:var(--surface);border:1px solid var(--line);padding:28px;border-radius:var(--radius-md);transition:border .2s ease,transform .2s ease,box-shadow .2s ease}.treatment:hover{border-color:var(--aqua);transform:translateY(-4px);box-shadow:var(--shadow-sm)}
+    .t-icon{width:48px;height:48px;border-radius:15px;background:var(--soft);display:grid;place-items:center;color:var(--blue-deep);margin-bottom:26px}.t-icon svg{width:24px;height:24px}.treatment h3{font-size:19px}.treatment p{color:var(--muted);font-size:14px;margin:10px 0 20px;min-height:44px}.price{display:flex;justify-content:space-between;gap:12px;border-top:1px solid var(--line);padding-top:15px;font-size:14px;color:var(--muted)}.price strong{color:var(--blue-deep)}
+    .price-note{margin:20px 0 0;text-align:right;color:var(--muted);font-size:12px}
+    .gallery{background:var(--surface)}.gallery-grid{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:260px 260px;gap:16px}.gallery-card{position:relative;overflow:hidden;border-radius:24px;border:1px solid var(--line);background:var(--surface-2)}.gallery-card:first-child{grid-row:1/3}.gallery-card svg{width:100%;height:100%;position:absolute;inset:0}.gallery-label{position:absolute;left:18px;bottom:18px;background:var(--surface);border:1px solid var(--line);padding:10px 13px;border-radius:12px;box-shadow:var(--shadow-sm)}.gallery-label strong{display:block;font-size:14px}.gallery-label span{font-size:11px;color:var(--muted)}
+    .testimonials{background:var(--bg)}.sample-banner{display:inline-flex;align-items:center;gap:8px;background:var(--soft);color:var(--blue-deep);padding:8px 12px;border-radius:999px;font-size:12px;font-weight:700;margin-bottom:18px}.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.review{background:var(--surface);border:1px solid var(--line);padding:26px;border-radius:20px}.stars{color:#de9a22;letter-spacing:2px}.review blockquote{margin:16px 0 24px;font-family:"Newsreader",serif;font-size:20px;line-height:1.35}.review footer{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:13px}.sample-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;border:1px solid var(--line);padding:4px 7px;border-radius:999px}
+    .contact{padding-bottom:120px}.contact-panel{background:var(--blue-deep);color:white;border-radius:34px;padding:54px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}.contact-panel:after{content:"";position:absolute;width:280px;height:280px;border:56px solid rgba(255,255,255,.09);border-radius:50%;right:-105px;top:-110px}.contact-panel h2{font-family:"Newsreader",serif;font-size:clamp(38px,5vw,58px);letter-spacing:-.035em}.contact-panel p{color:rgba(255,255,255,.76);max-width:480px}.contact-links{position:relative;z-index:2;display:grid;gap:12px}.contact-link{display:flex;align-items:center;gap:15px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);padding:16px 18px;border-radius:16px;text-decoration:none}.contact-link:hover{background:rgba(255,255,255,.16)}.contact-link svg{width:22px}.contact-link span{display:block;font-size:12px;color:rgba(255,255,255,.7)}.contact-link strong{font-size:16px}
+    .legal{max-width:1160px;margin:0 auto;padding:0 24px 110px;color:var(--muted);display:flex;justify-content:space-between;gap:20px;font-size:12px}.legal a{color:var(--blue-deep)}
+    .mobile-call{display:none;position:fixed;left:14px;right:14px;bottom:max(14px,env(safe-area-inset-bottom));z-index:30;align-items:center;justify-content:center;gap:10px;background:var(--blue);color:#fff;text-decoration:none;min-height:54px;border-radius:18px;font-weight:800;box-shadow:0 12px 30px rgba(0,60,100,.35)}.mobile-call svg{width:20px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr;gap:40px;padding-top:52px}.hero-copy{text-align:center}.hero-copy>p{margin-left:auto;margin-right:auto}.eyebrow{justify-content:center}.hero-cta,.trust-row{justify-content:center}.visual{min-height:460px;max-width:600px;width:100%;margin:auto}.about-grid{grid-template-columns:1fr;gap:44px}.about-art{min-height:380px}.treatment-grid,.reviews{grid-template-columns:repeat(2,1fr)}.contact-panel{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:16px}}
+    @media (max-width:650px){.nav-inner{height:62px;padding:0 16px}.nav-left{gap:0}.brand{font-size:20px}.nav-links{display:none}.nav-actions .btn{display:none}.hero{padding:38px 18px 58px}.hero-copy{text-align:left}.eyebrow{justify-content:flex-start}.hero-cta,.trust-row{justify-content:flex-start}.trust-row{align-items:flex-start;gap:14px;flex-direction:column}.visual{min-height:390px;border-radius:34px}.hero-note{right:12px;bottom:12px}.section{padding:68px 18px}.section-head{margin-bottom:28px}.about-grid{gap:34px}.about-art{min-height:330px}.principles,.treatment-grid,.reviews{grid-template-columns:1fr}.treatment p{min-height:auto}.gallery-grid{grid-template-columns:1fr;grid-template-rows:330px 220px 220px}.gallery-card:first-child{grid-row:auto}.contact{padding-bottom:96px}.contact-panel{padding:34px 22px;border-radius:26px}.legal{padding:0 18px 94px;display:block}.mobile-call{display:flex}.price-note{text-align:left}}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.treatment{transition:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a class="brand" href="#main" aria-label="Pinkcity Dental home"><span>Pinkcity</span> Dental</a>
+        <div class="nav-links">
+          <a href="#about">About</a><a href="#treatments">Treatments</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button class="theme" id="themeToggle" aria-label="Switch color theme" title="Switch color theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+        <a class="btn btn-primary" href="tel:+919829144512">Call clinic</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow">Modern dental care in Jaipur</div>
+        <h1 id="hero-title">Gentle dentistry for every smile.</h1>
+        <p>Clear guidance, thoughtful treatment options, and a calm approach to oral care—from routine check-ups to smile restoration.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+919829144512">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92Z"/></svg>
+            +91 98291 44512
+          </a>
+          <a class="btn btn-secondary" href="#treatments">Explore treatments</a>
+        </div>
+        <div class="trust-row">
+          <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 12 2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Transparent guidance</span>
+          <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s8-4.5 8-11V5l-8-3-8 3v5c0 6.5 8 11 8 11Z"/></svg> Hygiene-first care</span>
+        </div>
+      </div>
+      <div class="visual" aria-label="Illustration of a bright dental consultation room">
+        <svg viewBox="0 0 620 620" role="img" aria-hidden="true">
+          <defs><linearGradient id="chair" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#54cbd0"/><stop offset="1" stop-color="#1581a7"/></linearGradient></defs>
+          <circle cx="448" cy="132" r="62" fill="none" stroke="#4fc6cb" stroke-width="3" opacity=".35"/>
+          <path d="M72 488h482" stroke="#7eb7ca" stroke-width="5" stroke-linecap="round" opacity=".45"/>
+          <path d="M200 443c-8-65 12-135 69-169 62-37 151-4 163 72l9 61c4 29-18 55-47 56l-142 5c-27 1-49-9-52-25Z" fill="url(#chair)"/>
+          <path d="M317 466v57M250 529h137" stroke="#07577d" stroke-width="15" stroke-linecap="round"/>
+          <rect x="247" y="206" width="143" height="86" rx="43" transform="rotate(10 247 206)" fill="#fff" opacity=".95"/>
+          <path d="M500 425V211c0-38-24-62-58-62h-18" fill="none" stroke="#6b9db0" stroke-width="15" stroke-linecap="round"/>
+          <path d="M420 116h82c14 0 25 11 25 25v15c0 14-11 25-25 25h-82z" fill="#f8fdff" stroke="#9dc4d3" stroke-width="5"/>
+          <circle cx="465" cy="149" r="18" fill="#fff7d4"/>
+          <rect x="105" y="116" width="142" height="202" rx="8" fill="#c8ecf3" stroke="#fff" stroke-width="10"/>
+          <path d="M176 120v194M110 215h133" stroke="#fff" stroke-width="8"/>
+          <path d="M142 425v-83M112 425v-52M172 425v-113" stroke="#4b8fa4" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="142" cy="326" r="20" fill="#76d5c9"/><circle cx="112" cy="357" r="16" fill="#8be0d6"/><circle cx="172" cy="294" r="22" fill="#57c5bb"/>
+        </svg>
+        <div class="hero-note"><div class="note-icon">✓</div><div><strong>Calm, clear care</strong><span>Questions are always welcome</span></div></div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="wrap about-grid">
+        <div class="about-art" aria-hidden="true">
+          <svg viewBox="0 0 520 500">
+            <rect x="42" y="54" width="436" height="390" rx="32" fill="#fff" opacity=".84"/>
+            <circle cx="260" cy="224" r="128" fill="#d9f4f2"/>
+            <path d="M260 108c-72 0-119 45-119 111 0 37 17 65 36 94 17 25 31 77 49 77 19 0 13-76 34-76s15 76 34 76c18 0 32-52 49-77 19-29 36-57 36-94 0-66-47-111-119-111Z" fill="#fff" stroke="#1376a3" stroke-width="7"/>
+            <path d="M202 216c18 16 36 24 58 24 23 0 42-8 59-24" fill="none" stroke="#4fc6cb" stroke-width="8" stroke-linecap="round"/>
+            <circle cx="219" cy="187" r="6" fill="#07577d"/><circle cx="301" cy="187" r="6" fill="#07577d"/>
+            <path d="M81 386c37-17 76-16 114 4M324 82c33-13 68-11 100 8" fill="none" stroke="#87c6d8" stroke-width="10" stroke-linecap="round" opacity=".55"/>
+          </svg>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Care that starts with listening</div>
+          <h2>Modern treatment, explained in plain language.</h2>
+          <p>Pinkcity Dental is presented as a patient-focused Jaipur clinic where comfort and clear communication come first. Call the clinic to discuss your concern, available treatment options, and the next suitable step.</p>
+          <div class="principles">
+            <div class="principle"><strong>Thoughtful consultation</strong><span>Understand options before deciding.</span></div>
+            <div class="principle"><strong>Comfort-focused visits</strong><span>A measured, reassuring approach.</span></div>
+            <div class="principle"><strong>Clear cost guidance</strong><span>Ask about your estimate in advance.</span></div>
+            <div class="principle"><strong>Preventive mindset</strong><span>Build healthier everyday habits.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="treatments">
+      <div class="wrap">
+        <div class="section-head"><h2>Care for everyday needs and confident smiles.</h2><p>Indicative starting prices are shown for planning only. Final pricing depends on clinical assessment and treatment complexity.</p></div>
+        <div class="treatment-grid">
+          <article class="treatment"><div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c-4 0-7 2.7-7 6.5 0 2.4 1 4.2 2.1 6 1 1.7 1.8 5.5 3.1 5.5 1.2 0 .7-5 1.8-5s.6 5 1.8 5c1.3 0 2.1-3.8 3.1-5.5 1.1-1.8 2.1-3.6 2.1-6C19 5.7 16 3 12 3Z"/></svg></div><h3>Dental check-up</h3><p>Routine examination and an oral health discussion.</p><div class="price"><span>Sample price</span><strong>From ₹500</strong></div></article>
+          <article class="treatment"><div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m8 3 1.5 3L13 7.5 9.5 9 8 12 6.5 9 3 7.5 6.5 6 8 3ZM17 11l1.2 2.8L21 15l-2.8 1.2L17 19l-1.2-2.8L13 15l2.8-1.2L17 11Z"/></svg></div><h3>Cleaning & polishing</h3><p>Professional scaling to help remove plaque and stains.</p><div class="price"><span>Sample price</span><strong>From ₹1,200</strong></div></article>
+          <article class="treatment"><div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 5h14v14H5z"/><path d="M8 8v8M12 8v8M16 8v8"/></svg></div><h3>Tooth-coloured filling</h3><p>Restorative care designed to blend with your smile.</p><div class="price"><span>Sample price</span><strong>From ₹1,500</strong></div></article>
+          <article class="treatment"><div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c-4 0-7 2.7-7 6.5 0 2.4 1 4.2 2.1 6 1 1.7 1.8 5.5 3.1 5.5 1.2 0 .7-5 1.8-5s.6 5 1.8 5c1.3 0 2.1-3.8 3.1-5.5 1.1-1.8 2.1-3.6 2.1-6C19 5.7 16 3 12 3Z"/><path d="M9 9h6M12 6v8"/></svg></div><h3>Root canal care</h3><p>Treatment planned to preserve an affected tooth.</p><div class="price"><span>Sample price</span><strong>From ₹4,000</strong></div></article>
+          <article class="treatment"><div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8c4-5 12-5 16 0M4 16c4 5 12 5 16 0"/><path d="M6 10h12v4H6z"/></svg></div><h3>Braces consultation</h3><p>Assessment for alignment and bite correction options.</p><div class="price"><span>Sample price</span><strong>From ₹700</strong></div></article>
+          <article class="treatment"><div class="t-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12c3-5 13-5 16 0-3 5-13 5-16 0Z"/><path d="M8 12c2 2 6 2 8 0"/></svg></div><h3>Smile consultation</h3><p>Discuss whitening, shape, spacing, and restoration goals.</p><div class="price"><span>Sample price</span><strong>From ₹700</strong></div></article>
+        </div>
+        <p class="price-note">These are demo-site sample prices, not a confirmed clinic tariff. Please call for an accurate estimate.</p>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="wrap">
+        <div class="section-head"><h2>A closer look at the care journey.</h2><p>Illustrative scenes show the kind of calm, modern experience patients can expect—not photographs of the clinic.</p></div>
+        <div class="gallery-grid">
+          <figure class="gallery-card">
+            <svg viewBox="0 0 680 560" aria-hidden="true"><rect width="680" height="560" fill="#dff4f7"/><path d="M0 443h680v117H0z" fill="#c6e4e8"/><rect x="73" y="72" width="231" height="229" rx="18" fill="#fff"/><circle cx="188" cy="186" r="71" fill="#d9f4f2"/><path d="M188 128c-34 0-56 23-56 56 0 18 8 32 17 46 8 12 15 39 23 39s6-38 16-38 8 38 16 38 15-27 23-39c9-14 17-28 17-46 0-33-22-56-56-56Z" fill="#fff" stroke="#1376a3" stroke-width="4"/><path d="M360 386c-1-64 24-113 80-139 69-31 132 4 141 78l5 41c4 33-20 62-53 64l-116 7c-30 2-56-20-57-51Z" fill="#43bdc5"/><rect x="412" y="202" width="122" height="75" rx="38" transform="rotate(10 412 202)" fill="#fff"/><path d="M526 436v55M470 497h112" stroke="#116985" stroke-width="14" stroke-linecap="round"/></svg>
+            <figcaption class="gallery-label"><strong>Comfort-focused setting</strong><span>Illustrative concept</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <svg viewBox="0 0 480 300" aria-hidden="true"><rect width="480" height="300" fill="#eaf8fa"/><circle cx="240" cy="150" r="92" fill="#cceff0"/><path d="M240 67c-52 0-85 34-85 81 0 27 12 48 25 69 12 18 22 57 35 57 13 0 9-55 25-55s12 55 25 55c13 0 23-39 35-57 13-21 25-42 25-69 0-47-33-81-85-81Z" fill="#fff" stroke="#1376a3" stroke-width="5"/><path d="M194 150c28 23 63 23 92 0" fill="none" stroke="#4fc6cb" stroke-width="7" stroke-linecap="round"/><path d="m370 70 7 15 15 7-15 7-7 15-7-15-15-7 15-7z" fill="#50c5cc"/></svg>
+            <figcaption class="gallery-label"><strong>Cleaning & prevention</strong><span>Illustrative concept</span></figcaption>
+          </figure>
+          <figure class="gallery-card">
+            <svg viewBox="0 0 480 300" aria-hidden="true"><rect width="480" height="300" fill="#d9f0f6"/><rect x="82" y="62" width="316" height="177" rx="28" fill="#fff"/><path d="M129 146c49-58 173-58 222 0-49 58-173 58-222 0Z" fill="#d9f4f2" stroke="#1376a3" stroke-width="5"/><path d="M161 142c31 38 126 38 158 0" fill="none" stroke="#4fc6cb" stroke-width="8" stroke-linecap="round"/><path d="M175 153v25M208 164v26M240 168v27M272 164v26M305 153v25" stroke="#1376a3" stroke-width="4" opacity=".65"/></svg>
+            <figcaption class="gallery-label"><strong>Alignment planning</strong><span>Illustrative concept</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" aria-labelledby="reviews-title">
+      <div class="wrap">
+        <div class="sample-banner">Sample content for this demo website</div>
+        <div class="section-head"><h2 id="reviews-title">How patients might describe the experience.</h2><p>These testimonials are clearly marked samples and should be replaced with verified patient feedback before final publication.</p></div>
+        <div class="reviews">
+          <article class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“Everything was explained calmly, and I knew what to expect before the treatment began.”</blockquote><footer><span>Sample patient, Jaipur</span><span class="sample-tag">Sample</span></footer></article>
+          <article class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“The conversation felt unhurried, and the next steps were easy to understand.”</blockquote><footer><span>Sample patient, Jaipur</span><span class="sample-tag">Sample</span></footer></article>
+          <article class="review"><div class="stars" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“A reassuring experience from the first call through the consultation.”</blockquote><footer><span>Sample patient, Jaipur</span><span class="sample-tag">Sample</span></footer></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="contact-panel">
+          <div><h2>Ready to talk about your smile?</h2><p>Call Pinkcity Dental to ask about appointments, treatment options, and current pricing. The clinic can confirm availability directly.</p></div>
+          <div class="contact-links">
+            <a class="contact-link" href="tel:+919829144512"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92Z"/></svg><div><span>Tap to call</span><strong>+91 98291 44512</strong></div></a>
+            <a class="contact-link" href="mailto:isofather4@gmail.com?subject=Appointment%20enquiry%20for%20Pinkcity%20Dental"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg><div><span>Email enquiry</span><strong>isofather4@gmail.com</strong></div></a>
+            <div class="contact-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg><div><span>Service area</span><strong>Jaipur, Rajasthan</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="legal"><span>© 2026 Pinkcity Dental demo website.</span><span>Sample pricing and testimonials require clinic verification before use.</span></footer>
+  <a class="mobile-call" href="tel:+919829144512"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92Z"/></svg>Call Pinkcity Dental</a>
+
+  <script>
+    (function(){
+      var root=document.documentElement;
+      var button=document.getElementById('themeToggle');
+      button.addEventListener('click',function(){
+        var current=root.getAttribute('data-theme');
+        var systemDark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var next=current==='dark'?'light':current==='light'?'dark':(systemDark?'light':'dark');
+        root.setAttribute('data-theme',next);
+        button.setAttribute('aria-label',next==='dark'?'Switch to light theme':'Switch to dark theme');
+      });
+    })();
+  </script>
+</body>
+</html>

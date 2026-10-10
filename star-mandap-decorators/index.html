@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#3d0a10" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#f7efe3" media="(prefers-color-scheme: light)" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%235c0e14'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23d4af37' stroke-width='3'/%3E%3Ccircle cx='32' cy='32' r='8' fill='%23d4af37'/%3E%3C/svg%3E" />
+  <title>Star Mandap Decorators and Electric Works — Wedding Mandap &amp; Event Decor in Mumbai</title>
+  <meta name="description" content="Sample demo website. Star Mandap Decorators and Electric Works — grand mandap decoration, stage setup, wedding lighting and floral design in Mumbai. Call to plan your celebration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Jost", "Segoe UI", sans-serif;
+      /* dark theme (default): deep maroon night */
+      --bg: #2a070c;
+      --bg-deep: #1c0408;
+      --surface: #3d0a10;
+      --surface-soft: #4a0e15;
+      --ink: #f7ead2;
+      --muted: #d9bfa3;
+      --line: #7c2a2a;
+      --gold: #d4af37;
+      --gold-bright: #f2d984;
+      --gold-deep: #a8842c;
+      --maroon: #7a1520;
+      --shadow: 0 18px 50px rgba(0,0,0,.45);
+      --card-shadow: 0 10px 30px rgba(0,0,0,.35);
+      --hero-glow: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(212,175,55,.22), transparent 70%);
+    }
+    html[data-theme="light"] {
+      --bg: #faf3e7;
+      --bg-deep: #f3e8d5;
+      --surface: #fffdf7;
+      --surface-soft: #f7efe0;
+      --ink: #4a0f16;
+      --muted: #7a4a3a;
+      --line: #e3cfae;
+      --gold: #a8842c;
+      --gold-bright: #c9a227;
+      --gold-deep: #8a6a1f;
+      --maroon: #7a1520;
+      --shadow: 0 18px 50px rgba(122,21,32,.14);
+      --card-shadow: 0 10px 30px rgba(122,21,32,.10);
+      --hero-glow: radial-gradient(ellipse 80% 60% at 50% 20%, rgba(201,162,39,.25), transparent 70%);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      transition: background .4s ease, color .4s ease;
+      overflow-x: hidden;
+    }
+    ::selection { background: var(--gold); color: #2a070c; }
+
+    /* ---------- ornamental top border ---------- */
+    .top-strip {
+      height: 6px;
+      background: repeating-linear-gradient(90deg, var(--gold) 0 26px, var(--maroon) 26px 52px);
+    }
+
+    /* ---------- header ---------- */
+    header.site {
+      position: sticky; top: 0; z-index: 50;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: 1180px; margin: 0 auto; padding: .7rem 1.25rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--ink); }
+    .brand-mark {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, var(--maroon), #4a0a10);
+      border: 2px solid var(--gold);
+      display: grid; place-items: center;
+      font-family: var(--serif); font-size: 1.5rem; color: var(--gold-bright);
+      flex: none;
+    }
+    .brand-name { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; line-height: 1.2; }
+    .brand-name small { display: block; font-family: var(--sans); font-weight: 400; font-size: .7rem; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); }
+    nav.links { display: flex; gap: 1.4rem; }
+    nav.links a {
+      color: var(--ink); text-decoration: none; font-size: .92rem; letter-spacing: .06em;
+      padding: .3rem 0; border-bottom: 2px solid transparent;
+    }
+    nav.links a:hover { border-color: var(--gold); color: var(--gold-bright); }
+    .nav-actions { display: flex; align-items: center; gap: .6rem; }
+    .theme-btn {
+      border: 1px solid var(--gold); background: transparent; color: var(--gold-bright);
+      width: 40px; height: 40px; border-radius: 50%; cursor: pointer; font-size: 1.1rem;
+      display: grid; place-items: center;
+    }
+    .theme-btn:hover { background: color-mix(in srgb, var(--gold) 18%, transparent); }
+    .btn-call {
+      background: linear-gradient(135deg, var(--gold-bright), var(--gold) 60%, var(--gold-deep));
+      color: #2a070c; font-weight: 600; text-decoration: none;
+      padding: .6rem 1.25rem; border-radius: 999px; font-size: .92rem; letter-spacing: .04em;
+      box-shadow: 0 6px 20px rgba(212,175,55,.35);
+      display: inline-flex; align-items: center; gap: .45rem; white-space: nowrap;
+    }
+    .btn-call:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(212,175,55,.45); }
+    .btn-outline {
+      border: 1.5px solid var(--gold); color: var(--gold-bright); text-decoration: none;
+      padding: .6rem 1.3rem; border-radius: 999px; font-size: .92rem; letter-spacing: .04em;
+      display: inline-flex; align-items: center; gap: .45rem; white-space: nowrap;
+    }
+    .btn-outline:hover { background: color-mix(in srgb, var(--gold) 15%, transparent); }
+    .menu-btn { display: none; }
+
+    /* ---------- hero ---------- */
+    .hero {
+      position: relative; overflow: hidden;
+      background:
+        var(--hero-glow),
+        radial-gradient(ellipse 60% 45% at 80% 85%, rgba(122,21,32,.55), transparent 70%),
+        linear-gradient(180deg, var(--bg-deep), var(--bg));
+    }
+    html[data-theme="light"] .hero {
+      background:
+        var(--hero-glow),
+        radial-gradient(ellipse 60% 45% at 80% 85%, rgba(201,162,39,.18), transparent 70%),
+        linear-gradient(180deg, var(--bg-deep), var(--bg));
+    }
+    .hero-inner {
+      max-width: 1180px; margin: 0 auto; padding: 5.5rem 1.25rem 4.5rem;
+      text-align: center; position: relative; z-index: 2;
+    }
+    .hero-ornament { color: var(--gold); font-size: 1.6rem; letter-spacing: .5em; margin-bottom: 1.2rem; }
+    .hero-kicker {
+      display: inline-block; font-size: .78rem; letter-spacing: .32em; text-transform: uppercase;
+      color: var(--gold-bright); border: 1px solid var(--gold); border-radius: 999px;
+      padding: .45rem 1.3rem; margin-bottom: 1.6rem;
+    }
+    .hero h1 {
+      font-family: var(--serif); font-weight: 700;
+      font-size: clamp(2.4rem, 6.5vw, 4.6rem); line-height: 1.12; margin: 0 0 1rem;
+    }
+    .hero h1 .gold { color: var(--gold-bright); font-style: italic; }
+    .hero p.tagline {
+      font-size: clamp(1.05rem, 2.4vw, 1.35rem); color: var(--muted);
+      max-width: 640px; margin: 0 auto 2.2rem; font-weight: 300;
+    }
+    .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .hero-note {
+      margin-top: 2rem; font-size: .82rem; color: var(--muted); letter-spacing: .05em;
+    }
+    .hero-note .badge-sample {
+      display: inline-block; border: 1px dashed var(--gold); color: var(--gold-bright);
+      border-radius: 6px; padding: .1rem .55rem; font-size: .72rem; letter-spacing: .14em;
+      text-transform: uppercase; margin-right: .4rem;
+    }
+    /* floating diya dots */
+    .spark { position: absolute; border-radius: 50%; background: var(--gold-bright); opacity: .55; animation: float 9s ease-in-out infinite; z-index: 1; }
+    @keyframes float { 0%,100% { transform: translateY(0); opacity: .25; } 50% { transform: translateY(-46px); opacity: .7; } }
+
+    /* ---------- ornamental divider ---------- */
+    .divider { display: flex; align-items: center; gap: 1rem; max-width: 520px; margin: 0 auto; color: var(--gold); }
+    .divider::before, .divider::after { content: ""; height: 1px; flex: 1; background: linear-gradient(90deg, transparent, var(--gold)); }
+    .divider::after { background: linear-gradient(90deg, var(--gold), transparent); }
+    .divider span { font-size: 1.3rem; }
+
+    /* ---------- sections ---------- */
+    section.block { max-width: 1180px; margin: 0 auto; padding: 4.5rem 1.25rem; }
+    .sec-head { text-align: center; margin-bottom: 2.8rem; }
+    .sec-head .eyebrow {
+      font-size: .76rem; letter-spacing: .34em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: .8rem; display: block;
+    }
+    .sec-head h2 { font-family: var(--serif); font-size: clamp(1.9rem, 4.5vw, 2.9rem); margin: 0 0 .6rem; font-weight: 700; }
+    .sec-head p { color: var(--muted); max-width: 620px; margin: 0 auto; font-weight: 300; }
+
+    /* ---------- about ---------- */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+    .about-art {
+      border: 1px solid var(--gold); border-radius: 18px; padding: 2.2rem;
+      background: linear-gradient(150deg, var(--surface), var(--surface-soft));
+      box-shadow: var(--card-shadow); position: relative; overflow: hidden;
+    }
+    .about-art::before {
+      content: ""; position: absolute; inset: 10px; border: 1px dashed color-mix(in srgb, var(--gold) 55%, transparent);
+      border-radius: 12px; pointer-events: none;
+    }
+    .about-art svg { width: 100%; height: auto; display: block; }
+    .about-copy h3 { font-family: var(--serif); font-size: 1.7rem; margin: 0 0 1rem; }
+    .about-copy p { color: var(--muted); font-weight: 300; margin: 0 0 1.1rem; }
+    .about-points { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; gap: .8rem; }
+    .about-points li { display: flex; gap: .8rem; align-items: flex-start; }
+    .about-points .tick {
+      flex: none; width: 26px; height: 26px; border-radius: 50%;
+      border: 1.5px solid var(--gold); color: var(--gold-bright);
+      display: grid; place-items: center; font-size: .85rem; margin-top: .15rem;
+    }
+
+    /* ---------- services ---------- */
+    .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; }
+    .service-card {
+      background: linear-gradient(160deg, var(--surface), var(--surface-soft));
+      border: 1px solid var(--line); border-radius: 16px; padding: 2rem 1.5rem;
+      box-shadow: var(--card-shadow); position: relative; overflow: hidden;
+      transition: transform .25s ease, border-color .25s ease;
+    }
+    .service-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+    .service-card::after {
+      content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--gold-deep), var(--gold-bright), var(--gold-deep));
+    }
+    .service-icon {
+      width: 60px; height: 60px; border-radius: 50%; margin-bottom: 1.2rem;
+      background: radial-gradient(circle at 35% 30%, var(--maroon), #4a0a10);
+      border: 2px solid var(--gold); display: grid; place-items: center;
+      color: var(--gold-bright); font-size: 1.6rem;
+    }
+    html[data-theme="light"] .service-icon { color: var(--gold-bright); }
+    .service-card h3 { font-family: var(--serif); font-size: 1.35rem; margin: 0 0 .6rem; }
+    .service-card p { color: var(--muted); font-size: .94rem; font-weight: 300; margin: 0 0 1rem; }
+    .price { font-family: var(--serif); font-size: 1.5rem; color: var(--gold-bright); font-weight: 700; }
+    html[data-theme="light"] .price { color: var(--gold-deep); }
+    .price small { display: block; font-family: var(--sans); font-size: .72rem; font-weight: 400; color: var(--muted); letter-spacing: .08em; }
+    .sample-tag {
+      display: inline-block; margin-top: .9rem; font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold-bright); border: 1px dashed var(--gold); border-radius: 6px; padding: .2rem .6rem;
+    }
+    .services-note { text-align: center; margin-top: 1.8rem; color: var(--muted); font-size: .88rem; }
+
+    /* ---------- gallery ---------- */
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    .g-item {
+      border-radius: 16px; overflow: hidden; border: 1px solid var(--line);
+      box-shadow: var(--card-shadow); background: var(--surface);
+    }
+    .g-item svg { width: 100%; height: auto; display: block; }
+    .g-item figcaption { padding: 1rem 1.2rem; display: flex; justify-content: space-between; align-items: center; gap: .6rem; }
+    .g-item figcaption b { font-family: var(--serif); font-size: 1.05rem; font-weight: 600; }
+    .g-item figcaption span { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: .15rem .5rem; white-space: nowrap; }
+
+    /* ---------- testimonials ---------- */
+    .testis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+    .testi {
+      background: linear-gradient(160deg, var(--surface), var(--surface-soft));
+      border: 1px solid var(--line); border-radius: 16px; padding: 1.8rem 1.6rem;
+      box-shadow: var(--card-shadow); display: flex; flex-direction: column; gap: 1rem;
+    }
+    .testi .stars { color: var(--gold-bright); letter-spacing: .25em; font-size: 1rem; }
+    .testi p { font-family: var(--serif); font-style: italic; font-size: 1.12rem; margin: 0; flex: 1; }
+    .testi .who { font-size: .9rem; color: var(--muted); }
+    .testi .who b { color: var(--ink); font-weight: 500; }
+
+    /* ---------- contact ---------- */
+    .contact-wrap {
+      border: 1px solid var(--gold); border-radius: 20px; overflow: hidden;
+      background: linear-gradient(150deg, var(--surface), var(--surface-soft));
+      box-shadow: var(--shadow); display: grid; grid-template-columns: 1.1fr 1fr;
+    }
+    .contact-info { padding: 3rem; }
+    .contact-info h2 { font-family: var(--serif); font-size: 2rem; margin: 0 0 .8rem; }
+    .contact-info > p { color: var(--muted); font-weight: 300; margin: 0 0 2rem; }
+    .c-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.4rem; }
+    .c-ico {
+      flex: none; width: 48px; height: 48px; border-radius: 50%;
+      border: 1.5px solid var(--gold); display: grid; place-items: center;
+      color: var(--gold-bright); font-size: 1.25rem;
+    }
+    .c-row b { display: block; font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); margin-bottom: .2rem; font-weight: 500; }
+    .c-row a, .c-row span.val { color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+    .c-row a:hover { color: var(--gold-bright); text-decoration: underline; }
+    .contact-cta { padding: 3rem; background: color-mix(in srgb, var(--maroon) 26%, var(--surface)); border-left: 1px solid var(--gold); display: flex; flex-direction: column; justify-content: center; gap: 1.2rem; }
+    html[data-theme="light"] .contact-cta { background: #f3e2c8; }
+    .contact-cta h3 { font-family: var(--serif); font-size: 1.5rem; margin: 0; }
+    .contact-cta p { color: var(--muted); font-weight: 300; margin: 0; }
+    .contact-cta .btn-call { justify-content: center; font-size: 1.05rem; padding: .85rem 1.4rem; }
+
+    /* ---------- footer ---------- */
+    footer.site {
+      border-top: 1px solid var(--line); margin-top: 2rem;
+      background: var(--bg-deep);
+    }
+    .foot-inner { max-width: 1180px; margin: 0 auto; padding: 2.5rem 1.25rem; text-align: center; }
+    .foot-inner .brand-name { font-size: 1.3rem; margin-bottom: .4rem; }
+    .foot-inner p { color: var(--muted); font-size: .88rem; font-weight: 300; margin: .3rem 0; }
+    .demo-strip {
+      margin-top: 1.4rem; display: inline-block; font-size: .78rem; letter-spacing: .1em;
+      border: 1px dashed var(--gold); color: var(--gold-bright); border-radius: 8px; padding: .5rem 1rem;
+    }
+
+    /* ---------- reveal ---------- */
+    .reveal { opacity: 1; transform: none; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 960px) {
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .gallery, .testis { grid-template-columns: repeat(2, 1fr); }
+      .about-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .contact-cta { border-left: none; border-top: 1px solid var(--gold); }
+    }
+    @media (max-width: 720px) {
+      nav.links {
+        display: none; position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; gap: 0; background: var(--bg); border-bottom: 1px solid var(--line);
+        padding: .5rem 1.25rem 1rem;
+      }
+      nav.links.open { display: flex; }
+      nav.links a { padding: .7rem 0; border-bottom: 1px solid var(--line); }
+      .menu-btn { display: grid; }
+      .hero-inner { padding: 4rem 1.25rem 3.5rem; }
+      .services, .gallery, .testis { grid-template-columns: 1fr; }
+      .contact-info, .contact-cta { padding: 2rem 1.5rem; }
+      .btn-call.nav-cta { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-strip" aria-hidden="true"></div>
+
+  <header class="site">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span class="brand-name">Star Mandap Decorators<small>and Electric Works</small></span>
+      </a>
+      <nav class="links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark theme">◐</button>
+        <a class="btn-call nav-cta" href="tel:+919892624326">☎ Call Now</a>
+        <button class="theme-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top">
+    <span class="spark" style="width:8px;height:8px;left:12%;top:30%;animation-delay:0s"></span>
+    <span class="spark" style="width:6px;height:6px;left:24%;top:64%;animation-delay:2s"></span>
+    <span class="spark" style="width:9px;height:9px;left:68%;top:26%;animation-delay:4s"></span>
+    <span class="spark" style="width:5px;height:5px;left:82%;top:58%;animation-delay:1s"></span>
+    <span class="spark" style="width:7px;height:7px;left:45%;top:78%;animation-delay:3s"></span>
+    <div class="hero-inner">
+      <div class="hero-ornament" aria-hidden="true">❖ ❖ ❖</div>
+      <span class="hero-kicker">Mumbai · Weddings &amp; Grand Events</span>
+      <h1>Star Mandap Decorators<br /><span class="gold">and Electric Works</span></h1>
+      <p class="tagline">We turn wedding halls and open grounds into royal celebration spaces — beautiful mandaps, glowing lights, and fresh flowers, all arranged for you.</p>
+      <div class="hero-cta">
+        <a class="btn-call" href="tel:+919892624326">☎ Call +91 98926 24326</a>
+        <a class="btn-outline" href="#services">View Services</a>
+      </div>
+      <p class="hero-note"><span class="badge-sample">Sample</span> Demo website made to show a possible design. Prices, photos and reviews below are placeholders.</p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>❖</span></div>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="block" id="about">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our Story</span>
+      <h2>A Family Craft of Celebration</h2>
+      <p>Simple words about who we are and what we love to do.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-art reveal" aria-hidden="true">
+        <svg viewBox="0 0 400 300" role="img" aria-label="Decorative mandap illustration">
+          <defs>
+            <linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#5c0e14"/><stop offset="1" stop-color="#2a070c"/>
+            </linearGradient>
+            <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#a8842c"/><stop offset=".5" stop-color="#f2d984"/><stop offset="1" stop-color="#a8842c"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="400" height="300" rx="10" fill="url(#skyD)"/>
+          <g fill="#f2d984" opacity=".8">
+            <circle cx="60" cy="50" r="3"/><circle cx="140" cy="36" r="2.4"/><circle cx="230" cy="52" r="3"/>
+            <circle cx="320" cy="40" r="2.4"/><circle cx="360" cy="90" r="3"/><circle cx="36" cy="110" r="2.4"/>
+          </g>
+          <path d="M60 240 L60 110 Q200 60 340 110 L340 240" fill="none" stroke="url(#goldG)" stroke-width="7"/>
+          <g stroke="url(#goldG)" stroke-width="6">
+            <line x1="60" y1="240" x2="60" y2="110"/><line x1="340" y1="240" x2="340" y2="110"/>
+            <line x1="130" y1="240" x2="130" y2="88"/><line x1="270" y1="240" x2="270" y2="88"/>
+          </g>
+          <g fill="#7a1520" stroke="#d4af37" stroke-width="2">
+            <circle cx="60" cy="108" r="9"/><circle cx="130" cy="86" r="9"/><circle cx="200" cy="80" r="9"/>
+            <circle cx="270" cy="86" r="9"/><circle cx="340" cy="108" r="9"/>
+          </g>
+          <path d="M78 128 Q200 100 322 128" fill="none" stroke="#d4af37" stroke-width="3" stroke-dasharray="8 6"/>
+          <g>
+            <circle cx="120" cy="150" r="10" fill="#c2253a" stroke="#f2d984" stroke-width="2"/>
+            <circle cx="160" cy="150" r="10" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/>
+            <circle cx="200" cy="150" r="10" fill="#c2253a" stroke="#f2d984" stroke-width="2"/>
+            <circle cx="240" cy="150" r="10" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/>
+            <circle cx="280" cy="150" r="10" fill="#c2253a" stroke="#f2d984" stroke-width="2"/>
+          </g>
+          <ellipse cx="200" cy="252" rx="150" ry="14" fill="#1c0408" opacity=".6"/>
+          <g fill="#f2d984"><circle cx="200" cy="200" r="16"/><circle cx="200" cy="200" r="24" fill="none" stroke="#f2d984" stroke-width="2" opacity=".6"/></g>
+          <path d="M200 184 q6 -10 0 -18 q-6 8 0 18" fill="#ffdf6b"/>
+        </svg>
+      </div>
+      <div class="about-copy reveal">
+        <h3>Decorators who treat your big day like our own</h3>
+        <p>Star Mandap Decorators and Electric Works is a Mumbai-based team for wedding and event decoration. We design mandaps, stages, lighting and flower work for weddings, receptions, sangeet nights and festivals.</p>
+        <p>From the first meeting to the last light switched off, one team handles everything — design, flowers, fabric, lights and power. You enjoy the celebration; we handle the setup.</p>
+        <ul class="about-points">
+          <li><span class="tick">✓</span><span><b>One team for decor + electricals</b> — no need to call separate vendors.</span></li>
+          <li><span class="tick">✓</span><span><b>Designs for every budget</b> — simple and elegant, or full royal style.</span></li>
+          <li><span class="tick">✓</span><span><b>On-time setup</b> — we finish before your guests arrive.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>❖</span></div>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="block" id="services">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Services &amp; Sample Prices</h2>
+      <p>The prices below are <b>sample placeholder prices</b> for this demo only. Final price depends on venue size, design and event date — please call us for a real quote.</p>
+    </div>
+    <div class="services">
+      <article class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">⛩</div>
+        <h3>Mandap Decoration</h3>
+        <p>Traditional and modern mandap designs with fabric drapes, pillars, backdrops and ceiling work.</p>
+        <div class="price">₹24,999<small>starting price</small></div>
+        <span class="sample-tag">Sample price</span>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">✦</div>
+        <h3>Stage Setup</h3>
+        <p>Grand stages for weddings, sangeet and receptions — backdrops, entry gates, carpet and seating decor.</p>
+        <div class="price">₹14,999<small>starting price</small></div>
+        <span class="sample-tag">Sample price</span>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">💡</div>
+        <h3>Lighting &amp; Electrical</h3>
+        <p>Full event lighting — fairy lights, spotlights, chandeliers — plus safe power setup and generators.</p>
+        <div class="price">₹9,999<small>starting price</small></div>
+        <span class="sample-tag">Sample price</span>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-icon" aria-hidden="true">❀</div>
+        <h3>Floral Design</h3>
+        <p>Fresh flower arrangements — marigold strings, stage flowers, car decor, bouquets and varmala.</p>
+        <div class="price">₹7,999<small>starting price</small></div>
+        <span class="sample-tag">Sample price</span>
+      </article>
+    </div>
+    <p class="services-note">Need a full package? Call us — we make combo offers for mandap + stage + lights + flowers.</p>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>❖</span></div>
+
+  <!-- ================= GALLERY ================= -->
+  <section class="block" id="gallery">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our Work</span>
+      <h2>Gallery</h2>
+      <p>Sample illustrations showing the <i>style</i> of our decoration work. Real event photos will appear here on the final website.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g-item reveal">
+        <svg viewBox="0 0 400 260" role="img" aria-label="Sample royal red and gold mandap">
+          <rect width="400" height="260" fill="#3d0a10"/>
+          <rect x="0" y="200" width="400" height="60" fill="#23050a"/>
+          <path d="M70 200 L70 90 Q200 40 330 90 L330 200" fill="none" stroke="#d4af37" stroke-width="6"/>
+          <g stroke="#d4af37" stroke-width="5"><line x1="70" y1="200" x2="70" y2="90"/><line x1="330" y1="200" x2="330" y2="90"/><line x1="200" y1="200" x2="200" y2="62"/></g>
+          <g fill="#c2253a" stroke="#f2d984" stroke-width="2"><circle cx="110" cy="120" r="9"/><circle cx="160" cy="120" r="9"/><circle cx="240" cy="120" r="9"/><circle cx="290" cy="120" r="9"/></g>
+          <path d="M70 90 Q200 40 330 90 L330 108 Q200 58 70 108 Z" fill="#7a1520" opacity=".85"/>
+          <ellipse cx="200" cy="216" rx="110" ry="10" fill="#160309"/>
+          <circle cx="200" cy="170" r="12" fill="#f2d984"/><circle cx="200" cy="170" r="18" fill="none" stroke="#f2d984" stroke-width="2" opacity=".6"/>
+        </svg>
+        <figcaption><b>Royal Red &amp; Gold Mandap</b><span>Sample</span></figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <svg viewBox="0 0 400 260" role="img" aria-label="Sample illuminated wedding stage">
+          <rect width="400" height="260" fill="#1c0408"/>
+          <rect x="40" y="150" width="320" height="20" fill="#7a1520" stroke="#d4af37" stroke-width="3"/>
+          <rect x="60" y="170" width="280" height="90" fill="#2a070c"/>
+          <path d="M60 150 L60 60 L340 60 L340 150" fill="none" stroke="#d4af37" stroke-width="5"/>
+          <rect x="60" y="60" width="280" height="90" fill="#5c0e14" opacity=".8"/>
+          <g fill="#f2d984"><circle cx="110" cy="105" r="6"/><circle cx="170" cy="105" r="6"/><circle cx="230" cy="105" r="6"/><circle cx="290" cy="105" r="6"/></g>
+          <g stroke="#f2d984" stroke-width="2"><line x1="110" y1="105" x2="110" y2="60"/><line x1="170" y1="105" x2="170" y2="60"/><line x1="230" y1="105" x2="230" y2="60"/><line x1="290" y1="105" x2="290" y2="60"/></g>
+          <circle cx="200" cy="105" r="16" fill="none" stroke="#f2d984" stroke-width="3"/>
+          <text x="200" y="112" text-anchor="middle" fill="#f2d984" font-size="16" font-family="serif">✦</text>
+        </svg>
+        <figcaption><b>Illuminated Wedding Stage</b><span>Sample</span></figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <svg viewBox="0 0 400 260" role="img" aria-label="Sample marigold entrance gate">
+          <rect width="400" height="260" fill="#2a070c"/>
+          <rect x="0" y="210" width="400" height="50" fill="#1c0408"/>
+          <path d="M120 210 L120 60 Q200 20 280 60 L280 210" fill="none" stroke="#a8842c" stroke-width="10"/>
+          <g><circle cx="140" cy="120" r="11" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/><circle cx="180" cy="100" r="11" fill="#c2253a" stroke="#f2d984" stroke-width="2"/><circle cx="220" cy="100" r="11" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/><circle cx="260" cy="120" r="11" fill="#c2253a" stroke="#f2d984" stroke-width="2"/><circle cx="200" cy="70" r="11" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/></g>
+          <g stroke="#3f7a3a" stroke-width="4"><line x1="140" y1="131" x2="140" y2="150"/><line x1="180" y1="111" x2="180" y2="130"/><line x1="220" y1="111" x2="220" y2="130"/><line x1="260" y1="131" x2="260" y2="150"/></g>
+          <g fill="#f2d984" opacity=".7"><circle cx="60" cy="60" r="3"/><circle cx="340" cy="70" r="3"/><circle cx="90" cy="180" r="3"/><circle cx="310" cy="180" r="3"/></g>
+        </svg>
+        <figcaption><b>Marigold Entrance Gate</b><span>Sample</span></figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <svg viewBox="0 0 400 260" role="img" aria-label="Sample fairy light ceiling">
+          <rect width="400" height="260" fill="#160309"/>
+          <g stroke="#d4af37" stroke-width="2" opacity=".9">
+            <path d="M0 30 Q100 70 200 30 T400 30"/><path d="M0 70 Q100 110 200 70 T400 70"/><path d="M0 110 Q100 150 200 110 T400 110"/>
+          </g>
+          <g fill="#ffdf6b"><circle cx="50" cy="48" r="4"/><circle cx="120" cy="52" r="4"/><circle cx="200" cy="44" r="4"/><circle cx="280" cy="52" r="4"/><circle cx="350" cy="46" r="4"/><circle cx="90" cy="90" r="4"/><circle cx="180" cy="86" r="4"/><circle cx="270" cy="92" r="4"/><circle cx="150" cy="130" r="4"/><circle cx="240" cy="128" r="4"/><circle cx="320" cy="132" r="4"/></g>
+          <rect x="120" y="170" width="160" height="90" rx="6" fill="#3d0a10" stroke="#d4af37" stroke-width="3"/>
+          <circle cx="200" cy="205" r="12" fill="#f2d984"/>
+        </svg>
+        <figcaption><b>Fairy-Light Ceiling</b><span>Sample</span></figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <svg viewBox="0 0 400 260" role="img" aria-label="Sample floral stage backdrop">
+          <rect width="400" height="260" fill="#3d0a10"/>
+          <rect x="70" y="30" width="260" height="180" rx="8" fill="#5c0e14" stroke="#d4af37" stroke-width="4"/>
+          <g><circle cx="120" cy="80" r="12" fill="#c2253a" stroke="#f2d984" stroke-width="2"/><circle cx="160" cy="70" r="12" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/><circle cx="200" cy="80" r="12" fill="#c2253a" stroke="#f2d984" stroke-width="2"/><circle cx="240" cy="70" r="12" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/><circle cx="280" cy="80" r="12" fill="#c2253a" stroke="#f2d984" stroke-width="2"/><circle cx="140" cy="130" r="12" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/><circle cx="200" cy="130" r="14" fill="#c2253a" stroke="#f2d984" stroke-width="2"/><circle cx="260" cy="130" r="12" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/><circle cx="170" cy="175" r="12" fill="#c2253a" stroke="#f2d984" stroke-width="2"/><circle cx="230" cy="175" r="12" fill="#e8a13c" stroke="#f2d984" stroke-width="2"/></g>
+          <rect x="0" y="210" width="400" height="50" fill="#23050a"/>
+        </svg>
+        <figcaption><b>Floral Stage Backdrop</b><span>Sample</span></figcaption>
+      </figure>
+      <figure class="g-item reveal">
+        <svg viewBox="0 0 400 260" role="img" aria-label="Sample sangeet night setup">
+          <rect width="400" height="260" fill="#1c0408"/>
+          <circle cx="200" cy="60" r="34" fill="#f2d984" opacity=".9"/><circle cx="200" cy="60" r="44" fill="none" stroke="#f2d984" stroke-width="2" opacity=".5"/>
+          <rect x="60" y="150" width="280" height="16" fill="#7a1520" stroke="#d4af37" stroke-width="2"/>
+          <g fill="#ffdf6b"><circle cx="80" cy="120" r="5"/><circle cx="140" cy="100" r="5"/><circle cx="220" cy="105" r="5"/><circle cx="300" cy="115" r="5"/><circle cx="180" cy="135" r="5"/><circle cx="260" cy="140" r="5"/></g>
+          <g stroke="#d4af37" stroke-width="2"><line x1="80" y1="120" x2="80" y2="150"/><line x1="140" y1="100" x2="140" y2="150"/><line x1="220" y1="105" x2="220" y2="150"/><line x1="300" y1="115" x2="300" y2="150"/></g>
+          <rect x="0" y="210" width="400" height="50" fill="#160309"/>
+          <text x="200" y="245" text-anchor="middle" fill="#d4af37" font-size="15" font-family="serif" letter-spacing="4">SANGEET NIGHT</text>
+        </svg>
+        <figcaption><b>Sangeet Night Setup</b><span>Sample</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>❖</span></div>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="block" id="testimonials">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Kind Words</span>
+      <h2>Testimonials <span style="font-size:.55em;vertical-align:middle;border:1px dashed var(--gold);border-radius:6px;padding:.15em .6em;letter-spacing:.12em;">SAMPLE</span></h2>
+      <p>The reviews below are <b>sample placeholder reviews</b> written for this demo. Real customer reviews will replace them on the final website.</p>
+    </div>
+    <div class="testis">
+      <article class="testi reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"The mandap looked like a royal palace. Our guests are still talking about the flowers and lights."</p>
+        <div class="who"><b>Priya &amp; Rahul S.</b> — Wedding, Andheri <span class="sample-tag">Sample review</span></div>
+      </article>
+      <article class="testi reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>"One team did our stage, lights and power. Everything was ready on time and the sangeet stage looked amazing."</p>
+        <div class="who"><b>Amit P.</b> — Sangeet Night, Malad <span class="sample-tag">Sample review</span></div>
+      </article>
+      <article class="testi reveal">
+        <div class="stars" aria-label="4 out of 5 stars">★★★★☆</div>
+        <p>"Beautiful entrance gate and fresh flowers everywhere. Good value for the price. Highly recommended."</p>
+        <div class="who"><b>Sneha K.</b> — Reception, Borivali <span class="sample-tag">Sample review</span></div>
+      </article>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><span>❖</span></div>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="block" id="contact">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2>Plan Your Celebration</h2>
+      <p>Call or email us — tell us your event date and venue, and we will suggest a design and a quote.</p>
+    </div>
+    <div class="contact-wrap reveal">
+      <div class="contact-info">
+        <h2>Contact Details</h2>
+        <p>Call or email to discuss your event date, venue and decor ideas.</p>
+        <div class="c-row">
+          <span class="c-ico" aria-hidden="true">☎</span>
+          <div><b>Phone — tap to call</b><a href="tel:+919892624326">+91 98926 24326</a></div>
+        </div>
+        <div class="c-row">
+          <span class="c-ico" aria-hidden="true">✉</span>
+          <div><b>Email</b><a href="mailto:isofather4@gmail.com">isofather4@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="contact-cta">
+        <h3>Ready to book your date?</h3>
+        <p>Wedding season dates fill fast. One call is all it takes to start planning.</p>
+        <a class="btn-call" href="tel:+919892624326">☎ Call +91 98926 24326</a>
+        <a class="btn-outline" href="mailto:isofather4@gmail.com?subject=Decoration%20Enquiry%20—%20Star%20Mandap%20Decorators">✉ Send an Email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="foot-inner">
+      <div class="brand-name" style="font-family:var(--serif);font-weight:700;">Star Mandap Decorators <span style="color:var(--gold-bright);">✦</span> and Electric Works</div>
+      <p>Mumbai · <a href="tel:+919892624326" style="color:var(--gold-bright);">+91 98926 24326</a> · <a href="mailto:isofather4@gmail.com" style="color:var(--gold-bright);">isofather4@gmail.com</a></p>
+      <p>© 2026 Star Mandap Decorators and Electric Works. All rights reserved.</p>
+      <span class="demo-strip">DEMO WEBSITE — sample design for illustration only. No online booking; please call or email.</span>
+    </div>
+  </footer>
+
+  <script>
+    // theme: follows the system on load; the toggle lasts for this open page
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('themeBtn');
+      function setTheme(t) {
+        root.setAttribute('data-theme', t);
+        btn.textContent = t === 'dark' ? '☀' : '◐';
+        btn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      }
+      setTheme(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      btn.addEventListener('click', function () {
+        setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+      });
+      // mobile menu
+      var menu = document.getElementById('menuBtn');
+      var links = document.getElementById('navLinks');
+      menu.addEventListener('click', function () { links.classList.toggle('open'); });
+      links.addEventListener('click', function (e) { if (e.target.tagName === 'A') links.classList.remove('open'); });
+      // scroll reveal
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
