@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fff8f3" />
+  <link rel="icon" href="data:," />
+  <title>Hitch Key Weddings — Wedding Planning in Mumbai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg:#fff8f3; --paper:#fffdfa; --ink:#2b1a1d; --muted:#725f62; --wine:#7b2439;
+      --wine-deep:#511423; --gold:#b98b42; --blush:#f3dedb; --line:#dcc9c4;
+      --shadow:0 20px 60px rgba(72,31,38,.13); --serif:"Cormorant Garamond",Georgia,serif;
+      --sans:"Manrope",system-ui,sans-serif;
+    }
+    @media (prefers-color-scheme:dark){
+      :root{--bg:#160f11;--paper:#211719;--ink:#fff3ed;--muted:#ceb9b8;--wine:#e18699;--wine-deep:#f0a7b7;--gold:#d7ae69;--blush:#332024;--line:#4e363a;--shadow:0 24px 70px rgba(0,0,0,.42)}
+      meta[name="theme-color"]{content:#160f11}
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;overflow-x:hidden}
+    body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:radial-gradient(var(--gold) .55px,transparent .55px);background-size:18px 18px;z-index:-1}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit;color:inherit}
+    .wrap{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+    .topbar{position:absolute;top:0;left:0;right:0;z-index:10;padding:22px 0;color:#fff}
+    .nav{display:flex;justify-content:flex-end;align-items:center;gap:30px}
+    .nav a{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-shadow:0 1px 9px rgba(0,0,0,.4)}
+    .nav .nav-cta{border:1px solid rgba(255,255,255,.7);padding:9px 16px}
+    .menu-btn{display:none;border:0;background:transparent;color:white;padding:8px;cursor:pointer}
+    .menu-btn svg{display:block}
+    .hero{min-height:760px;display:grid;grid-template-columns:1.02fr .98fr;position:relative;background:#3b171f;color:white}
+    .hero-copy{padding:145px max(42px,calc((100vw - 1180px)/2)) 92px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+    .hero-copy::after{content:"";position:absolute;width:1px;height:110px;background:linear-gradient(var(--gold),transparent);right:38px;bottom:30px}
+    .eyebrow{display:flex;align-items:center;gap:13px;color:var(--gold);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+    .eyebrow::before{content:"";width:36px;height:1px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-family:var(--serif);font-size:clamp(4rem,7vw,7.1rem);line-height:.84;font-weight:500;letter-spacing:-.055em;margin:30px 0}
+    .hero p{font-size:1rem;color:#f1dfe0;max-width:510px;margin-bottom:34px}
+    .actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 22px;background:var(--wine);color:white;font-weight:600;font-size:.86rem;border:1px solid var(--wine);transition:.2s ease}
+    .btn:hover{background:var(--wine-deep);border-color:var(--wine-deep)}
+    .btn.light{background:#fff;color:#471823;border-color:#fff}
+    .btn.ghost{background:transparent;color:inherit;border-color:var(--line)}
+    .hero .btn.ghost{border-color:rgba(255,255,255,.55)}
+    .hero-visual{position:relative;min-height:760px;overflow:hidden}
+    .hero-visual::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#3b171f 0,transparent 28%),linear-gradient(0deg,rgba(22,8,11,.45),transparent 45%);z-index:1}
+    .hero-visual img{filter:saturate(.88);transition:transform 12s ease}
+    .hero:hover .hero-visual img{transform:scale(1.035)}
+    .image-note{position:absolute;z-index:2;right:28px;bottom:30px;color:#fff;font-family:var(--serif);font-size:1.15rem;font-style:italic}
+    .intro{padding:112px 0 100px}
+    .intro-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:90px;align-items:start}
+    .intro h2,.section-title{font-family:var(--serif);font-size:clamp(3rem,5vw,5rem);line-height:.98;font-weight:500;letter-spacing:-.035em;margin:20px 0 28px}
+    .lead{font-family:var(--serif);font-size:clamp(1.6rem,2.5vw,2.25rem);line-height:1.25;color:var(--wine-deep)}
+    .intro-body p{color:var(--muted)}
+    .values{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);margin-top:50px}
+    .value{padding:22px 26px 0 0}
+    .value strong{display:block;font-family:var(--serif);font-size:1.55rem;color:var(--ink)}
+    .value span{font-size:.8rem;color:var(--muted)}
+    .services{background:var(--paper);padding:104px 0}
+    .services-head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:54px}
+    .services-head .section-title{max-width:570px;margin-bottom:0}
+    .services-head p{max-width:390px;color:var(--muted);margin-bottom:8px}
+    .service-list{border-top:1px solid var(--line)}
+    .service{display:grid;grid-template-columns:65px 1fr 1.3fr 28px;gap:28px;align-items:center;padding:34px 0;border-bottom:1px solid var(--line)}
+    .service .num{font-family:var(--serif);font-size:1.3rem;color:var(--gold)}
+    .service h3{font-family:var(--serif);font-size:2.15rem;font-weight:500;margin:0}
+    .service p{margin:0;color:var(--muted);font-size:.92rem}
+    .service svg{color:var(--wine)}
+    .portfolio{padding:112px 0}
+    .portfolio-head{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:48px}
+    .portfolio-head p{color:var(--muted);max-width:470px}
+    .gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:260px 260px;gap:14px}
+    .shot{position:relative;overflow:hidden;background:var(--blush)}
+    .shot:first-child{grid-row:1/3}
+    .shot:nth-child(2){grid-column:2/4}
+    .shot img{transition:transform .65s ease}
+    .shot:hover img{transform:scale(1.04)}
+    .shot figcaption{position:absolute;left:18px;bottom:16px;background:rgba(41,18,23,.84);color:white;padding:8px 12px;font-family:var(--serif);font-size:1.05rem;backdrop-filter:blur(8px)}
+    .story{padding:110px 0;background:var(--wine-deep);color:white;position:relative;overflow:hidden}
+    .story::after{content:"“";position:absolute;right:3vw;top:-130px;font-family:var(--serif);font-size:26rem;color:rgba(255,255,255,.05);line-height:1}
+    .story-inner{display:grid;grid-template-columns:.75fr 1.25fr;gap:90px;position:relative;z-index:1}
+    .story .eyebrow{color:#e2bc78}
+    .quote-label{font-size:.73rem;text-transform:uppercase;letter-spacing:.13em;color:#dfb5bc;margin-bottom:14px}
+    blockquote{margin:0;font-family:var(--serif);font-size:clamp(2rem,4vw,3.7rem);line-height:1.13;font-weight:500}
+    .quote-note{color:#e9cfd3;margin-top:25px;max-width:650px;font-size:.85rem}
+    .process{padding:110px 0;background:var(--paper)}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:50px}
+    .step{border-top:2px solid var(--gold);padding-top:22px}
+    .step b{color:var(--gold);font-size:.78rem;letter-spacing:.12em}
+    .step h3{font-family:var(--serif);font-size:1.65rem;font-weight:500;margin:16px 0 10px}
+    .step p{font-size:.88rem;color:var(--muted);margin:0}
+    .contact{padding:105px 0 0}
+    .contact-card{background:var(--blush);display:grid;grid-template-columns:1.2fr .8fr;overflow:hidden}
+    .contact-copy{padding:70px}
+    .contact-copy .section-title{max-width:640px}
+    .contact-copy>p{max-width:580px;color:var(--muted)}
+    .contact-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:32px}
+    .contact-photo{min-height:500px;position:relative}
+    .contact-photo::after{content:"Mumbai · India";position:absolute;right:18px;bottom:18px;background:rgba(45,17,24,.8);color:white;padding:8px 12px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
+    footer{padding:35px 0;color:var(--muted);font-size:.78rem}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-row a{color:var(--wine-deep);font-weight:600}
+    .mobile-call{display:none}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;min-height:auto}.hero-copy{min-height:670px;padding:130px 36px 70px;background:linear-gradient(90deg,rgba(49,13,22,.93),rgba(49,13,22,.63)),url('assets/hero.jpg') center/cover}.hero-visual{display:none}
+      .intro-grid,.portfolio-head,.story-inner{grid-template-columns:1fr;gap:30px}.services-head{align-items:start;flex-direction:column}.service{grid-template-columns:44px 1fr 24px}.service p{grid-column:2/4}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:340px 240px 240px}.shot:first-child{grid-column:1/3;grid-row:auto}.shot:nth-child(2){grid-column:auto}.process-grid{grid-template-columns:1fr 1fr}.contact-card{grid-template-columns:1fr}.contact-photo{min-height:360px}
+    }
+    @media (max-width:640px){
+      .wrap{width:min(100% - 30px,1180px)}.topbar{padding:14px 0}.menu-btn{display:block;margin-left:auto}.nav{align-items:flex-end}.nav-links{display:none;position:absolute;top:62px;right:15px;background:var(--paper);color:var(--ink);padding:20px;box-shadow:var(--shadow);min-width:210px}.nav-links.open{display:flex;flex-direction:column;gap:18px}.nav a{text-shadow:none}.nav .nav-cta{border-color:var(--line)}
+      h1{font-size:4.2rem}.hero-copy{min-height:650px;padding-inline:24px}.hero p{font-size:.92rem}.hero-copy::after{display:none}.intro,.portfolio{padding:78px 0}.services,.process{padding:76px 0}.intro-grid{gap:24px}.values{grid-template-columns:1fr}.value{padding:18px 0;border-bottom:1px solid var(--line)}.service{gap:14px;padding:26px 0}.service h3{font-size:1.8rem}.gallery{display:grid;grid-template-columns:1fr;grid-template-rows:340px 220px 220px 220px}.shot:first-child,.shot:nth-child(2){grid-column:auto;grid-row:auto}.story{padding:78px 0}.process-grid{grid-template-columns:1fr;gap:32px}.contact{padding-top:70px}.contact-copy{padding:45px 25px}.contact-photo{min-height:290px}.contact-links{flex-direction:column}.contact-links .btn{width:100%}.footer-row{align-items:flex-start;flex-direction:column;padding-bottom:68px}.mobile-call{display:flex;position:fixed;z-index:20;left:15px;right:15px;bottom:12px;height:52px;background:var(--wine);color:white;align-items:center;justify-content:center;font-size:.87rem;font-weight:600;box-shadow:0 12px 35px rgba(30,10,15,.32)}
+    }
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero-visual img,.shot img{transition:none}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <button class="menu-btn" aria-label="Open navigation" aria-expanded="false">
+        <svg width="27" height="27" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>&nbsp;&nbsp;&nbsp;
+        <a href="#services">Services</a>&nbsp;&nbsp;&nbsp;
+        <a href="#work">Celebrations</a>&nbsp;&nbsp;&nbsp;
+        <a class="nav-cta" href="#contact">Plan your wedding</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Wedding planning · Mumbai</div>
+        <h1>Your forever,<br>beautifully<br>brought to life.</h1>
+        <p>Thoughtful planning, immersive décor and destination celebrations—composed around your story, your people and the way you want the day to feel.</p>
+        <div class="actions">
+          <a class="btn light" href="#contact">Begin your story</a>
+          <a class="btn ghost" href="tel:+919930163447">Call +91 99301 63447</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/hero.jpg" alt="A richly decorated Indian wedding mandap with marigold flowers" />
+        <div class="image-note">Every detail, held with care.</div>
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <div class="wrap intro-grid">
+        <div>
+          <div class="eyebrow">The heart of it</div>
+          <h2>A celebration that feels unmistakably yours.</h2>
+        </div>
+        <div class="intro-body">
+          <p class="lead">We bring creative direction and calm, considered planning together—so you can stay present while every moving part falls into place.</p>
+          <p>From the first conversation to the final farewell, Hitch Key Weddings shapes each celebration with warmth, intention and an eye for the details guests remember. Based in Mumbai, we plan local and destination weddings with one clear belief: beautiful events begin with listening.</p>
+          <div class="values">
+            <div class="value"><strong>Personal</strong><span>Designed around your story</span></div>
+            <div class="value"><strong>Seamless</strong><span>One team, every detail</span></div>
+            <div class="value"><strong>Joyful</strong><span>Space to enjoy the moment</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="services-head">
+          <h2 class="section-title">From first idea to final celebration.</h2>
+          <p>Choose complete wedding direction or focused support for the parts that need an expert hand.</p>
+        </div>
+        <div class="service-list">
+          <article class="service"><span class="num">01</span><h3>Wedding Planning</h3><p>Timelines, venues, vendor coordination, guest experience and on-ground management—brought together with clarity from day one.</p><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor"/></svg></article>
+          <article class="service"><span class="num">02</span><h3>Décor & Design</h3><p>A cohesive visual world spanning ceremony spaces, floral stories, tablescapes, lighting and all the thoughtful finishing touches.</p><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor"/></svg></article>
+          <article class="service"><span class="num">03</span><h3>Destination Weddings</h3><p>Location discovery, travel logistics and multi-day hospitality—planned so your guests feel looked after from arrival to farewell.</p><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m-5-5 5 5-5 5" stroke="currentColor"/></svg></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="work">
+      <div class="wrap">
+        <div class="portfolio-head">
+          <div><div class="eyebrow">Visual inspiration</div><h2 class="section-title">A glimpse of what’s possible.</h2></div>
+          <p>Royal ceremonies, intimate gatherings and vibrant soirées—imagery shown here is inspiration for the creative direction Hitch Key Weddings can shape around each couple.</p>
+        </div>
+        <div class="gallery">
+          <figure class="shot"><img src="assets/couple.jpg" alt="An Indian couple seated during their wedding ceremony" /><figcaption>The ceremony</figcaption></figure>
+          <figure class="shot"><img src="assets/decor.jpg" alt="Elegant wedding reception tablescape with colourful flowers" /><figcaption>The details</figcaption></figure>
+          <figure class="shot"><img src="assets/destination.jpg" alt="A couple at a grand palace destination in India" /><figcaption>The destination</figcaption></figure>
+          <figure class="shot"><img src="assets/planning.jpg" alt="A contemporary Mumbai wedding celebration" /><figcaption>The celebration</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" aria-labelledby="story-title">
+      <div class="wrap story-inner">
+        <div><div class="eyebrow">The client experience</div><p class="quote-note">Illustrative testimonial copy for this demo. Replace with verified client words before launch.</p></div>
+        <div>
+          <div class="quote-label">Sample testimonial</div>
+          <blockquote id="story-title">“We felt present in every moment, certain that every detail was in good hands.”</blockquote>
+          <p class="quote-note">— Couple’s names · Wedding location</p>
+          <div class="quote-label" style="margin-top:34px">Sample testimonial</div>
+          <blockquote style="font-size:clamp(1.55rem,3vw,2.65rem)">“The celebration felt completely like us—from the first welcome to the final dance.”</blockquote>
+          <p class="quote-note">— Couple’s names · Wedding location</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="wrap">
+        <div class="eyebrow">Our approach</div>
+        <h2 class="section-title">A clear path to your day.</h2>
+        <div class="process-grid">
+          <article class="step"><b>01</b><h3>Discover</h3><p>We listen—to your story, priorities, traditions and vision.</p></article>
+          <article class="step"><b>02</b><h3>Design</h3><p>We shape the creative direction and practical plan as one.</p></article>
+          <article class="step"><b>03</b><h3>Coordinate</h3><p>Vendors, timelines and logistics are managed end to end.</p></article>
+          <article class="step"><b>04</b><h3>Celebrate</h3><p>You stay present. We make sure the day unfolds beautifully.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-card">
+        <div class="contact-copy">
+          <div class="eyebrow">Let’s create something beautiful</div>
+          <h2 class="section-title">Tell us about the celebration you’re dreaming of.</h2>
+          <p>Share your date, location and what matters most to you. We’ll start with a thoughtful conversation and take it from there.</p>
+          <div class="contact-links">
+            <a class="btn" href="tel:+919930163447">Call +91 99301 63447</a>
+            <a class="btn ghost" href="mailto:isofather4@gmail.com?subject=Wedding%20Enquiry%20for%20Hitch%20Key%20Weddings">Email an enquiry</a>
+          </div>
+        </div>
+        <div class="contact-photo"><img src="assets/hero.jpg" alt="Traditional floral wedding ceremony setting" /></div>
+      </div>
+      <footer>
+        <div class="wrap footer-row"><span>Wedding planning, décor & destination celebrations in Mumbai.</span><a href="mailto:isofather4@gmail.com">isofather4@gmail.com</a></div>
+      </footer>
+    </section>
+  </main>
+  <a class="mobile-call" href="tel:+919930163447">Call Hitch Key Weddings · +91 99301 63447</a>
+  <script>
+    (function(){
+      var button=document.querySelector('.menu-btn');
+      var menu=document.querySelector('.nav-links');
+      button.addEventListener('click',function(){
+        var open=menu.classList.toggle('open');
+        button.setAttribute('aria-expanded',String(open));
+      });
+      menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');button.setAttribute('aria-expanded','false');}});
+    }());
+  </script>
+</body>
+</html>
