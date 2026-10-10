@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fff4e8" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#140a26" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="data:," />
+  <title>Arun Coaching Centre — Dream Big, Study Smart | Delhi</title>
+  <meta name="description" content="Arun Coaching Centre, Delhi — coaching for Class 10 & 12, JEE/NEET foundation and spoken English. Call +91 92131 07966 to know more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #fff6ec;
+      --surface: #ffffff;
+      --surface-soft: #ffeed9;
+      --ink: #1c0f38;
+      --muted: #5b4a7a;
+      --line: #f0d9bd;
+      --orange: #f4560b;
+      --orange-deep: #c73e02;
+      --purple: #7c2ff2;
+      --purple-deep: #5b1fd6;
+      --electric: #ffd400;
+      --pink: #ff2e88;
+      --ok: #0f9d58;
+      --shadow: 0 22px 55px rgba(244, 86, 11, .14);
+      --display: "Bricolage Grotesque", "Space Grotesk", system-ui, sans-serif;
+      --body: "Space Grotesk", system-ui, -apple-system, sans-serif;
+    }
+    html[data-theme="dark"] {
+      --bg: #140a26;
+      --surface: #1e1140;
+      --surface-soft: #251551;
+      --ink: #fdf3ff;
+      --muted: #c3aee8;
+      --line: #3a2568;
+      --orange: #ff7a2f;
+      --orange-deep: #ff9a55;
+      --purple: #a06bff;
+      --purple-deep: #c09aff;
+      --electric: #ffd400;
+      --pink: #ff5aa0;
+      --shadow: 0 22px 55px rgba(0, 0, 0, .45);
+    }
+    @media (prefers-color-scheme: dark) {
+      html[data-theme="auto"] {
+        --bg: #140a26;
+        --surface: #1e1140;
+        --surface-soft: #251551;
+        --ink: #fdf3ff;
+        --muted: #c3aee8;
+        --line: #3a2568;
+        --orange: #ff7a2f;
+        --orange-deep: #ff9a55;
+        --purple: #a06bff;
+        --purple-deep: #c09aff;
+        --electric: #ffd400;
+        --pink: #ff5aa0;
+        --shadow: 0 22px 55px rgba(0, 0, 0, .45);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    img, svg { display: block; max-width: 100%; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .skip { position: fixed; left: 12px; top: -120px; z-index: 60; background: var(--ink); color: var(--bg); padding: 10px 14px; border-radius: 10px; font-weight: 700; }
+    .skip:focus { top: 12px; }
+    h1, h2, h3 { font-family: var(--display); line-height: 1.05; margin: 0; letter-spacing: -0.01em; }
+
+    /* Demo banner */
+    .demo-bar {
+      background: linear-gradient(90deg, var(--orange), var(--pink), var(--purple));
+      color: #fff;
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: 9px 12px;
+    }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 40;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(14px);
+      border-bottom: 2px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; gap: 22px; min-height: 72px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; margin-right: auto; }
+    .brand-mark {
+      width: 46px; height: 46px; border-radius: 14px;
+      background: conic-gradient(from 40deg, var(--orange), var(--pink), var(--purple), var(--orange));
+      display: grid; place-items: center; color: #fff;
+      font-family: var(--display); font-weight: 800; font-size: 1.35rem;
+      transform: rotate(-6deg);
+      box-shadow: var(--shadow);
+    }
+    .brand-name { font-family: var(--display); font-weight: 800; font-size: 1.05rem; line-height: 1.15; }
+    .brand-name small { display: block; font-family: var(--body); font-weight: 600; font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 24px; }
+    .nav-links a { text-decoration: none; font-weight: 600; font-size: .94rem; color: var(--muted); }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--orange); }
+    .theme-toggle {
+      width: 44px; height: 44px; border-radius: 50%;
+      border: 2px solid var(--line); background: var(--surface); color: var(--ink);
+      display: grid; place-items: center; cursor: pointer;
+    }
+    .theme-toggle:hover { border-color: var(--orange); }
+    .theme-toggle .moon { display: none; }
+    html[data-theme="dark"] .theme-toggle .sun { display: none; }
+    html[data-theme="dark"] .theme-toggle .moon { display: block; }
+    @media (prefers-color-scheme: dark) {
+      html[data-theme="auto"] .theme-toggle .sun { display: none; }
+      html[data-theme="auto"] .theme-toggle .moon { display: block; }
+    }
+    .menu-button { display: none; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      min-height: 52px; padding: 0 26px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--orange), var(--pink));
+      color: #fff; font-weight: 700; font-size: 1rem; text-decoration: none;
+      border: none; cursor: pointer;
+      box-shadow: 0 12px 30px rgba(244, 86, 11, .35);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .btn:hover, .btn:focus-visible { transform: translateY(-2px) scale(1.02); box-shadow: 0 16px 36px rgba(244, 86, 11, .45); }
+    .btn.ghost {
+      background: var(--surface); color: var(--ink);
+      border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
+    }
+    .btn.ghost:hover { box-shadow: 6px 6px 0 var(--orange); border-color: var(--orange); }
+    .btn.purple { background: linear-gradient(135deg, var(--purple), var(--purple-deep)); box-shadow: 0 12px 30px rgba(124, 47, 242, .35); }
+    .btn .phone-ic { flex: none; }
+
+    /* Hero */
+    .hero { position: relative; padding: 84px 0 40px; overflow: clip; }
+    .blob { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .5; pointer-events: none; z-index: 0; }
+    .blob.b1 { width: 480px; height: 480px; background: var(--orange); top: -140px; right: -120px; opacity: .28; }
+    .blob.b2 { width: 420px; height: 420px; background: var(--purple); bottom: -160px; left: -140px; opacity: .30; }
+    .blob.b3 { width: 220px; height: 220px; background: var(--pink); top: 40%; left: 45%; opacity: .22; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center; }
+    .sticker {
+      display: inline-block; background: var(--electric); color: #1c0f38;
+      font-weight: 800; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase;
+      padding: 8px 16px; border-radius: 999px; border: 2px solid #1c0f38;
+      transform: rotate(-3deg); box-shadow: 3px 3px 0 #1c0f38; margin-bottom: 22px;
+    }
+    .hero h1 { font-size: clamp(2.7rem, 6.4vw, 4.6rem); font-weight: 800; text-transform: uppercase; }
+    .hero h1 .hl {
+      background: linear-gradient(120deg, var(--orange), var(--pink));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero h1 .underline { position: relative; white-space: nowrap; }
+    .hero h1 .underline svg { position: absolute; left: 0; right: 0; bottom: -10px; width: 100%; height: 14px; }
+    .hero-sub { font-size: 1.12rem; color: var(--muted); max-width: 34rem; margin: 24px 0 30px; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 16px; }
+    .hero-note { margin-top: 18px; font-size: .88rem; color: var(--muted); }
+    .hero-note strong { color: var(--ink); }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 34px; }
+    .stat {
+      background: var(--surface); border: 2px solid var(--line); border-radius: 18px;
+      padding: 16px 14px; text-align: center; transform: rotate(-1deg);
+    }
+    .stat:nth-child(2) { transform: rotate(1.2deg); }
+    .stat:nth-child(3) { transform: rotate(-.6deg); }
+    .stat b { display: block; font-family: var(--display); font-size: 1.7rem; font-weight: 800; color: var(--orange); }
+    .stat span { font-size: .78rem; color: var(--muted); font-weight: 600; }
+    .stat .tag { display: inline-block; margin-top: 6px; font-size: .62rem; font-weight: 800; letter-spacing: .1em; background: var(--surface-soft); color: var(--muted); padding: 2px 8px; border-radius: 999px; }
+
+    .hero-art { position: relative; }
+    .hero-card {
+      background: var(--surface); border: 3px solid var(--ink); border-radius: 26px;
+      padding: 30px 26px; box-shadow: 10px 10px 0 var(--orange);
+      transform: rotate(2deg); position: relative; z-index: 2;
+    }
+    .hero-card h3 { font-size: 1.45rem; margin-bottom: 6px; }
+    .hero-card p { color: var(--muted); margin: 0 0 16px; }
+    .trophy-row { display: flex; gap: 12px; margin: 18px 0; }
+    .trophy {
+      flex: 1; border-radius: 16px; padding: 14px 10px; text-align: center;
+      font-weight: 700; font-size: .82rem; color: #fff;
+    }
+    .trophy.t1 { background: linear-gradient(135deg, var(--orange), #ff9a3d); transform: rotate(-2deg); }
+    .trophy.t2 { background: linear-gradient(135deg, var(--purple), var(--pink)); transform: rotate(1.5deg); }
+    .trophy.t3 { background: linear-gradient(135deg, #0f9d58, #34d399); transform: rotate(-1deg); }
+    .trophy b { display: block; font-family: var(--display); font-size: 1.35rem; }
+    .float-badge {
+      position: absolute; z-index: 3; background: var(--electric); color: #1c0f38;
+      font-weight: 800; font-size: .8rem; padding: 10px 16px; border-radius: 14px;
+      border: 2px solid #1c0f38; box-shadow: 4px 4px 0 #1c0f38;
+    }
+    .float-badge.fb1 { top: -22px; left: -18px; transform: rotate(-8deg); }
+    .float-badge.fb2 { bottom: -20px; right: -10px; transform: rotate(6deg); background: #fff; }
+    @keyframes floaty { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+    .float-badge { animation: floaty 3.4s ease-in-out infinite; }
+    .float-badge.fb2 { animation-delay: 1.2s; }
+
+    /* Ticker */
+    .ticker {
+      margin-top: 56px; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink);
+      background: var(--ink); color: var(--bg); overflow: hidden; white-space: nowrap;
+      transform: rotate(-1.2deg) scale(1.02);
+    }
+    .ticker-track { display: inline-block; padding: 12px 0; animation: tick 22s linear infinite; font-family: var(--display); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .ticker-track span { margin: 0 22px; }
+    .ticker-track .dot { color: var(--orange); }
+    @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* Sections */
+    section.block { padding: 88px 0; }
+    .kicker {
+      display: inline-block; font-size: .78rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--purple); background: color-mix(in srgb, var(--purple) 12%, transparent);
+      border: 2px solid color-mix(in srgb, var(--purple) 40%, transparent);
+      padding: 7px 16px; border-radius: 999px; margin-bottom: 18px;
+    }
+    .sec-title { font-size: clamp(2rem, 4.4vw, 3rem); font-weight: 800; text-transform: uppercase; margin-bottom: 14px; }
+    .sec-title .hl { color: var(--orange); }
+    .sec-sub { color: var(--muted); max-width: 44rem; margin: 0 0 40px; font-size: 1.05rem; }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .about-copy p { color: var(--muted); }
+    .about-copy p strong { color: var(--ink); }
+    .values { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 14px; }
+    .values li {
+      display: flex; gap: 14px; align-items: flex-start;
+      background: var(--surface); border: 2px solid var(--line); border-radius: 16px; padding: 16px 18px;
+    }
+    .values li:nth-child(odd) { transform: rotate(-.6deg); }
+    .values li:nth-child(even) { transform: rotate(.6deg); }
+    .values .ic {
+      flex: none; width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; color: #fff;
+    }
+    .values .ic.i1 { background: linear-gradient(135deg, var(--orange), var(--pink)); }
+    .values .ic.i2 { background: linear-gradient(135deg, var(--purple), var(--purple-deep)); }
+    .values .ic.i3 { background: linear-gradient(135deg, #0f9d58, #34d399); }
+    .values b { display: block; font-size: 1rem; }
+    .values span { color: var(--muted); font-size: .92rem; }
+    .about-art {
+      background: linear-gradient(135deg, var(--purple), var(--pink), var(--orange));
+      border: 3px solid var(--ink); border-radius: 26px; padding: 34px 30px; color: #fff;
+      box-shadow: 10px 10px 0 var(--ink); transform: rotate(1.4deg);
+    }
+    .about-art h3 { font-size: 1.6rem; margin-bottom: 10px; }
+    .about-art p { margin: 0 0 18px; color: rgba(255,255,255,.92); }
+    .quote { background: rgba(255,255,255,.14); border-left: 5px solid var(--electric); border-radius: 0 14px 14px 0; padding: 14px 18px; font-style: italic; }
+    .quote b { display: block; font-style: normal; margin-top: 8px; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+
+    /* Courses */
+    .courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .course {
+      background: var(--surface); border: 3px solid var(--ink); border-radius: 24px; padding: 30px 26px;
+      display: flex; flex-direction: column; position: relative;
+      box-shadow: 7px 7px 0 var(--line);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .course:hover, .course:focus-within { transform: translateY(-6px) rotate(-.5deg); box-shadow: 10px 10px 0 var(--orange); }
+    .course.popular { background: linear-gradient(160deg, var(--surface), color-mix(in srgb, var(--electric) 22%, var(--surface))); }
+    .course-num {
+      font-family: var(--display); font-weight: 800; font-size: 3.2rem; line-height: 1;
+      background: linear-gradient(135deg, var(--orange), var(--pink));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .course.popular .course-num { background: linear-gradient(135deg, var(--purple), var(--pink)); -webkit-background-clip: text; background-clip: text; }
+    .course h3 { font-size: 1.35rem; margin: 12px 0 8px; }
+    .course .for { font-size: .82rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--purple); margin-bottom: 10px; }
+    .course p { color: var(--muted); font-size: .95rem; margin: 0 0 16px; }
+    .course ul { list-style: none; margin: 0 0 20px; padding: 0; display: grid; gap: 8px; font-size: .92rem; }
+    .course ul li { display: flex; gap: 10px; align-items: flex-start; }
+    .course ul li svg { flex: none; margin-top: 4px; color: var(--ok); }
+    .fee {
+      margin-top: auto; background: var(--surface-soft); border: 2px dashed var(--orange);
+      border-radius: 14px; padding: 12px 16px; text-align: center;
+    }
+    .fee b { font-family: var(--display); font-size: 1.5rem; color: var(--orange-deep); }
+    .fee span { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; margin-top: 2px; }
+    .sample-pill {
+      position: absolute; top: -14px; right: 18px;
+      background: var(--electric); color: #1c0f38; border: 2px solid #1c0f38;
+      font-size: .68rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 999px; transform: rotate(3deg);
+    }
+    .fees-note {
+      margin-top: 26px; text-align: center; color: var(--muted); font-size: .9rem;
+      background: var(--surface); border: 2px solid var(--line); border-radius: 14px; padding: 14px 20px;
+    }
+    .fees-note strong { color: var(--ink); }
+
+    /* Gallery */
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .g-card {
+      border: 3px solid var(--ink); border-radius: 20px; overflow: hidden;
+      background: var(--surface); box-shadow: 6px 6px 0 var(--line);
+      transition: transform .18s ease;
+    }
+    .g-card:hover { transform: scale(1.03) rotate(-.6deg); }
+    .g-art { height: 190px; display: grid; place-items: center; position: relative; overflow: hidden; }
+    .g-art svg { width: 84px; height: 84px; }
+    .g1 { background: linear-gradient(135deg, #ff9a3d, #ff2e88); }
+    .g2 { background: linear-gradient(135deg, #7c2ff2, #3d7bff); }
+    .g3 { background: linear-gradient(135deg, #0f9d58, #a3e635); }
+    .g4 { background: linear-gradient(135deg, #f4560b, #ffd400); }
+    .g5 { background: linear-gradient(135deg, #ff2e88, #7c2ff2); }
+    .g6 { background: linear-gradient(135deg, #3d7bff, #00d4ff); }
+    .g-cap { padding: 14px 18px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .g-cap b { font-size: .95rem; }
+    .g-cap .sample-pill { position: static; transform: rotate(-2deg); }
+
+    /* Testimonials */
+    .testi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .quote-card {
+      background: var(--surface); border: 3px solid var(--ink); border-radius: 22px; padding: 28px 24px;
+      position: relative; box-shadow: 7px 7px 0 var(--purple);
+    }
+    .quote-card:nth-child(2) { box-shadow: 7px 7px 0 var(--orange); transform: rotate(.7deg); }
+    .quote-card:nth-child(1) { transform: rotate(-.7deg); }
+    .quote-card .stars { color: var(--electric); letter-spacing: 3px; font-size: 1.05rem; margin-bottom: 12px; text-shadow: 0 0 1px #1c0f38; }
+    .quote-card p { font-size: .98rem; margin: 0 0 18px; }
+    .who { display: flex; align-items: center; gap: 12px; }
+    .avatar {
+      width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+      font-family: var(--display); font-weight: 800; color: #fff; font-size: 1.15rem; flex: none;
+    }
+    .a1 { background: linear-gradient(135deg, var(--orange), var(--pink)); }
+    .a2 { background: linear-gradient(135deg, var(--purple), var(--pink)); }
+    .a3 { background: linear-gradient(135deg, #0f9d58, #3d7bff); }
+    .who b { display: block; font-size: .95rem; }
+    .who span { font-size: .8rem; color: var(--muted); }
+
+    /* Contact */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+    .call-card {
+      background: linear-gradient(135deg, var(--orange), var(--pink));
+      border: 3px solid var(--ink); border-radius: 26px; padding: 40px 34px; color: #fff;
+      box-shadow: 10px 10px 0 var(--ink); transform: rotate(-1deg);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .call-card h3 { font-size: 1.9rem; margin-bottom: 8px; }
+    .call-card p { margin: 0 0 24px; color: rgba(255,255,255,.94); }
+    .call-card .btn { background: #fff; color: #c73e02; box-shadow: 0 12px 30px rgba(0,0,0,.25); align-self: flex-start; }
+    .call-card .btn:hover { transform: translateY(-2px) scale(1.03); }
+    .contact-cards { display: grid; gap: 16px; }
+    .c-card {
+      background: var(--surface); border: 2px solid var(--line); border-radius: 18px; padding: 22px;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .c-card .ic { flex: none; width: 50px; height: 50px; border-radius: 14px; display: grid; place-items: center; color: #fff; }
+    .c-card b { display: block; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+    .c-card a.big { font-weight: 700; font-size: 1.08rem; text-decoration: none; }
+    .c-card a.big:hover { color: var(--orange); }
+    .c-card p { margin: 2px 0 0; font-weight: 600; }
+    .hours { margin-top: 22px; background: var(--surface); border: 2px dashed var(--purple); border-radius: 16px; padding: 16px 22px; font-size: .92rem; color: var(--muted); }
+    .hours b { color: var(--ink); }
+
+    /* Mobile call bar */
+    .mobile-bar {
+      position: fixed; z-index: 45; left: 10px; right: 10px;
+      bottom: max(10px, env(safe-area-inset-bottom));
+      display: none; gap: 8px; padding: 8px;
+      background: var(--surface); border: 2px solid var(--line); border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+    .mobile-bar .btn { flex: 1; min-height: 50px; font-size: .95rem; padding: 0 10px; }
+
+    footer { border-top: 3px solid var(--ink); padding: 34px 0 110px; }
+    .foot { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; justify-content: space-between; color: var(--muted); font-size: .88rem; }
+    .foot .brand-name { font-size: .95rem; }
+
+    .reveal { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+
+    @media (max-width: 960px) {
+      .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+      .courses, .testi { grid-template-columns: 1fr 1fr; }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+      .menu-button {
+        display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px;
+        border: 2px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer;
+      }
+      .nav-links.open {
+        display: flex; position: absolute; top: 74px; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: var(--surface); border-bottom: 3px solid var(--ink); padding: 10px 20px 18px;
+      }
+      .nav-links.open a { padding: 12px 4px; border-bottom: 1px solid var(--line); }
+      .mobile-bar { display: flex; }
+      section.block { padding: 64px 0; }
+    }
+    @media (max-width: 600px) {
+      .courses, .testi, .gallery { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 56px 0 30px; }
+      .float-badge.fb1 { left: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="demo-bar">Demo website — sample content for illustration only</div>
+
+  <header>
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Arun Coaching Centre — home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-name">Arun Coaching Centre<small>Delhi</small></span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch light and dark theme">
+        <svg class="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+        <svg class="moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <a class="btn" href="tel:+919213107966" style="min-height:44px;padding:0 20px;">
+        <svg class="phone-ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+        Call now
+      </a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-label="Welcome">
+      <div class="blob b1" aria-hidden="true"></div>
+      <div class="blob b2" aria-hidden="true"></div>
+      <div class="blob b3" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="reveal in">
+          <span class="sticker">Admissions open — 2026 batch</span>
+          <h1>Study hard.<br /><span class="hl">Dream bigger.</span><br />
+            <span class="underline">Win big.
+              <svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M3 10 C 60 3, 140 3, 197 8" stroke="#ffd400" stroke-width="6" fill="none" stroke-linecap="round"/></svg>
+            </span>
+          </h1>
+          <p class="hero-sub">Arun Coaching Centre in Delhi helps students crack boards, JEE, NEET and speak English with confidence — with small batches, personal attention and weekly tests. Your rank is waiting. Come get it.</p>
+          <div class="hero-ctas">
+            <a class="btn" href="tel:+919213107966">
+              <svg class="phone-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+              Call +91 92131 07966
+            </a>
+            <a class="btn ghost" href="#courses">Explore courses</a>
+          </div>
+          <p class="hero-note"><strong>Free demo class</strong> for every new student. No admission form here — this is a demo site, just call us!</p>
+          <div class="stats" aria-label="Centre highlights (sample figures)">
+            <div class="stat"><b>10+</b><span>Years teaching</span><span class="tag">SAMPLE</span></div>
+            <div class="stat"><b>500+</b><span>Students guided</span><span class="tag">SAMPLE</span></div>
+            <div class="stat"><b>15</b><span>Max batch size</span><span class="tag">SAMPLE</span></div>
+          </div>
+        </div>
+        <div class="hero-art reveal in" aria-hidden="true">
+          <span class="float-badge fb1">Small batches only</span>
+          <span class="float-badge fb2">Weekly tests</span>
+          <div class="hero-card">
+            <h3>Your success plan</h3>
+            <p>Three steps. Zero confusion. Full support till your exam day.</p>
+            <div class="trophy-row">
+              <div class="trophy t1"><b>1</b>Learn concepts</div>
+              <div class="trophy t2"><b>2</b>Practice daily</div>
+              <div class="trophy t3"><b>3</b>Test weekly</div>
+            </div>
+            <p style="font-size:.9rem"><strong>Boards, JEE, NEET, English</strong> — one centre, one goal: your best marks yet.</p>
+          </div>
+        </div>
+      </div>
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>Class 10</span><span class="dot">★</span><span>Class 12</span><span class="dot">★</span><span>JEE Foundation</span><span class="dot">★</span><span>NEET Foundation</span><span class="dot">★</span><span>Spoken English</span><span class="dot">★</span>
+          <span>Class 10</span><span class="dot">★</span><span>Class 12</span><span class="dot">★</span><span>JEE Foundation</span><span class="dot">★</span><span>NEET Foundation</span><span class="dot">★</span><span>Spoken English</span><span class="dot">★</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="block" id="about" aria-label="About us">
+      <div class="wrap">
+        <span class="kicker reveal">About us</span>
+        <h2 class="sec-title reveal">A centre that treats <span class="hl">your marks</span> like our own</h2>
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p><strong>Arun Coaching Centre</strong> is a neighbourhood coaching centre in Delhi built on one simple idea: every student can top if someone explains concepts clearly and keeps them practising.</p>
+            <p>We keep batches small so every student gets personal attention. Doubts are cleared the same day. Parents get regular progress updates. No big promises — just honest teaching and hard work.</p>
+            <ul class="values">
+              <li>
+                <span class="ic i1" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></span>
+                <div><b>Concept-first teaching</b><span>Basics made simple in Hindi and English, then practice till it sticks.</span></div>
+              </li>
+              <li>
+                <span class="ic i2" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>
+                <div><b>Small batches, big attention</b><span>Limited seats per batch so no student is left behind. (Sample claim)</span></div>
+              </li>
+              <li>
+                <span class="ic i3" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span>
+                <div><b>Weekly tests + parent updates</b><span>Regular tests, checked copies and honest progress reports. (Sample claim)</span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="about-art reveal">
+            <h3>Why students stay with us</h3>
+            <p>We are not a big brand with 200 students in one hall. We are the centre where the teacher knows your name, your weak chapter and your target score.</p>
+            <div class="quote">"Padhai ko bojh mat banao — aadat banao."<b>— Teaching motto (sample)</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES -->
+    <section class="block" id="courses" aria-label="Courses and fees">
+      <div class="wrap">
+        <span class="kicker reveal">Courses</span>
+        <h2 class="sec-title reveal">Pick your <span class="hl">battlefield</span></h2>
+        <p class="sec-sub reveal">Three focused programs. One goal: make you exam-ready and confident. Fees below are <strong>samples only</strong> — call us for the real fee plan.</p>
+        <div class="courses">
+          <article class="course reveal">
+            <span class="sample-pill">Sample</span>
+            <div class="course-num" aria-hidden="true">01</div>
+            <div class="for">Class 10 &amp; 12</div>
+            <h3>Board Exam Mastery</h3>
+            <p>Complete Maths, Science, English and SST preparation with NCERT-first teaching, chapter tests and full board-pattern mock papers.</p>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>NCERT + extra practice sheets</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Monthly full-syllabus mocks</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Doubt-clearing every day</li>
+            </ul>
+            <div class="fee"><b>₹2,000<span style="font-size:.95rem">/month</span></b><span>Sample fee — not real</span></div>
+          </article>
+          <article class="course popular reveal">
+            <span class="sample-pill">Sample</span>
+            <div class="course-num" aria-hidden="true">02</div>
+            <div class="for">JEE / NEET Foundation</div>
+            <h3>Rank Booster Foundation</h3>
+            <p>Early foundation in Physics, Chemistry, Maths and Biology with MCQ drills, speed practice and previous-year question marathons.</p>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Daily MCQ practice sets</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Weekly rank-style tests</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>1-on-1 mentor sessions</li>
+            </ul>
+            <div class="fee"><b>₹3,500<span style="font-size:.95rem">/month</span></b><span>Sample fee — not real</span></div>
+          </article>
+          <article class="course reveal">
+            <span class="sample-pill">Sample</span>
+            <div class="course-num" aria-hidden="true">03</div>
+            <div class="for">All ages</div>
+            <h3>Spoken English Power</h3>
+            <p>Speak English with confidence — grammar made easy, daily speaking practice, group discussions and interview preparation.</p>
+            <ul>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Daily speaking practice</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Grammar without fear</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Interview &amp; stage skills</li>
+            </ul>
+            <div class="fee"><b>₹1,200<span style="font-size:.95rem">/month</span></b><span>Sample fee — not real</span></div>
+          </article>
+        </div>
+        <p class="fees-note reveal"><strong>Note:</strong> All fees, batch sizes and results shown on this demo page are <strong>sample/placeholder content</strong>. Please call <a href="tel:+919213107966"><strong>+91 92131 07966</strong></a> for the actual fee structure and batch timings.</p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="block" id="gallery" aria-label="Gallery" style="padding-top:0">
+      <div class="wrap">
+        <span class="kicker reveal">Gallery</span>
+        <h2 class="sec-title reveal">Life at the <span class="hl">centre</span></h2>
+        <p class="sec-sub reveal">A peek into our classrooms and activities. All images below are sample placeholders.</p>
+        <div class="gallery">
+          <figure class="g-card reveal" style="margin:0">
+            <div class="g-art g1" role="img" aria-label="Sample illustration: classroom learning"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></svg></div>
+            <figcaption class="g-cap"><b>Smart classrooms</b><span class="sample-pill">Sample</span></figcaption>
+          </figure>
+          <figure class="g-card reveal" style="margin:0">
+            <div class="g-art g2" role="img" aria-label="Sample illustration: library and study material"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <figcaption class="g-cap"><b>Study material</b><span class="sample-pill">Sample</span></figcaption>
+          </figure>
+          <figure class="g-card reveal" style="margin:0">
+            <div class="g-art g3" role="img" aria-label="Sample illustration: awards and achievements"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v6a5 5 0 0 1-10 0V4z"/><path d="M7 6H4a1 1 0 0 0-1 1c0 2.5 2 4 4 4M17 6h3a1 1 0 0 1 1 1c0 2.5-2 4-4 4"/></svg></div>
+            <figcaption class="g-cap"><b>Toppers wall</b><span class="sample-pill">Sample</span></figcaption>
+          </figure>
+          <figure class="g-card reveal" style="margin:0">
+            <div class="g-art g4" role="img" aria-label="Sample illustration: group discussion"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></div>
+            <figcaption class="g-cap"><b>Group discussions</b><span class="sample-pill">Sample</span></figcaption>
+          </figure>
+          <figure class="g-card reveal" style="margin:0">
+            <div class="g-art g5" role="img" aria-label="Sample illustration: test and practice"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 15l2 2 4-4"/></svg></div>
+            <figcaption class="g-cap"><b>Weekly test series</b><span class="sample-pill">Sample</span></figcaption>
+          </figure>
+          <figure class="g-card reveal" style="margin:0">
+            <div class="g-art g6" role="img" aria-label="Sample illustration: motivational events"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4"/></svg></div>
+            <figcaption class="g-cap"><b>Motivation sessions</b><span class="sample-pill">Sample</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="block" id="reviews" aria-label="Student reviews" style="padding-top:0">
+      <div class="wrap">
+        <span class="kicker reveal">Reviews</span>
+        <h2 class="sec-title reveal">Students <span class="hl">love it</span> here</h2>
+        <p class="sec-sub reveal">These reviews are <strong>sample testimonials</strong> written for this demo — not real student feedback.</p>
+        <div class="testi">
+          <article class="quote-card reveal">
+            <span class="sample-pill">Sample review</span>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Maths was my weakest subject. After 6 months at Arun Coaching Centre, I scored 94 in Class 10 boards. The teachers never give up on you."</p>
+            <div class="who"><span class="avatar a1" aria-hidden="true">R</span><div><b>Rohit Sharma</b><span>Class 10 student (sample name)</span></div></div>
+          </article>
+          <article class="quote-card reveal">
+            <span class="sample-pill">Sample review</span>
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"The weekly JEE tests showed me exactly where I was losing marks. My speed in Physics MCQs doubled. Best decision of Class 11."</p>
+            <div class="who"><span class="avatar a2" aria-hidden="true">S</span><div><b>Sneha Verma</b><span>JEE aspirant (sample name)</span></div></div>
+          </article>
+          <article class="quote-card reveal">
+            <span class="sample-pill">Sample review</span>
+            <div class="stars" aria-label="4 out of 5 stars">★★★★☆</div>
+            <p>"I joined for spoken English before my job interviews. Three months later I gave my full interview in English — and got the job!"</p>
+            <div class="who"><span class="avatar a3" aria-hidden="true">A</span><div><b>Amit Kumar</b><span>Spoken English batch (sample name)</span></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="block" id="contact" aria-label="Contact us" style="padding-top:0">
+      <div class="wrap">
+        <span class="kicker reveal">Contact</span>
+        <h2 class="sec-title reveal">Let's talk about <span class="hl">your goals</span></h2>
+        <p class="sec-sub reveal">Call us for a free demo class, fee details or batch timings. This demo page has no admission form — just pick up the phone!</p>
+        <div class="contact-grid">
+          <div class="call-card reveal">
+            <h3>Ready to start?</h3>
+            <p>One call is all it takes. Ask about the free demo class for any course.</p>
+            <a class="btn" href="tel:+919213107966" aria-label="Call Arun Coaching Centre on +91 92131 07966">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg>
+              Call +91 92131 07966
+            </a>
+          </div>
+          <div class="contact-cards reveal">
+            <div class="c-card">
+              <span class="ic" style="background:linear-gradient(135deg,var(--purple),var(--purple-deep))" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6L22 7"/></svg></span>
+              <div><b>Email</b><a class="big" href="mailto:isofather4@gmail.com">isofather4@gmail.com</a></div>
+            </div>
+            <div class="c-card">
+              <span class="ic" style="background:linear-gradient(135deg,var(--orange),var(--pink))" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <div><b>Location</b><p>Delhi, India</p></div>
+            </div>
+            <div class="c-card">
+              <span class="ic" style="background:linear-gradient(135deg,#0f9d58,#34d399)" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+              <div><b>Timings (sample)</b><p>Mon–Sat, 8 AM – 8 PM</p></div>
+            </div>
+          </div>
+        </div>
+        <p class="hours reveal"><b>Demo notice:</b> This is a sample website made to show what your coaching centre's website could look like. Timings, fees, reviews and statistics are placeholders.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <span class="brand-name">Arun Coaching Centre <small style="display:block;font-family:var(--body);font-weight:500;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;">Delhi</small></span>
+      <span>Demo website — sample content only. © 2026 (sample).</span>
+      <a href="tel:+919213107966" style="font-weight:700;text-decoration:none;">+91 92131 07966</a>
+    </div>
+  </footer>
+
+  <div class="mobile-bar" role="navigation" aria-label="Quick call">
+    <a class="btn" href="tel:+919213107966">Call now</a>
+    <a class="btn purple" href="#courses">Courses</a>
+  </div>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.getElementById('theme-toggle');
+      var sessionTheme = 'auto';
+      function currentTheme() { return sessionTheme; }
+      function apply(t) {
+        root.setAttribute('data-theme', t);
+        sessionTheme = t;
+        toggle.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : t === 'light' ? 'Switch to dark theme' : 'Switch light and dark theme (auto)');
+      }
+      apply(currentTheme());
+      toggle.addEventListener('click', function () {
+        var t = root.getAttribute('data-theme');
+        apply(t === 'dark' ? 'light' : t === 'light' ? 'auto' : 'dark');
+      });
+
+      var menuBtn = document.querySelector('.menu-button');
+      var navLinks = document.getElementById('nav-links');
+      menuBtn.addEventListener('click', function () {
+        var open = navLinks.classList.toggle('open');
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navLinks.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded', 'false'); }
+      });
+
+      var revealEls = document.querySelectorAll('.reveal:not(.in)');
+      if ('IntersectionObserver' in window && revealEls.length) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.12 });
+        revealEls.forEach(function (el) { io.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</body>
+</html>
