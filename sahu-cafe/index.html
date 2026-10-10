@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#f4eadb" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#18120e" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet" />
+  <title>Sahu Cafe — Chai & Quick Bites in Lucknow</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --paper: #f4eadb;
+      --paper-2: #ead8be;
+      --ink: #251811;
+      --muted: #66554b;
+      --card: #fffaf1;
+      --line: #cdb89b;
+      --accent: #a73318;
+      --accent-2: #6f2916;
+      --leaf: #496044;
+      --shadow: 0 24px 70px rgba(64, 32, 12, .16);
+      --header: rgba(244, 234, 219, .92);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #18120e;
+        --paper-2: #251a13;
+        --ink: #f8ead7;
+        --muted: #cdbcae;
+        --card: #211711;
+        --line: #4e3b2e;
+        --accent: #eb7759;
+        --accent-2: #ffb39e;
+        --leaf: #8daa84;
+        --shadow: 0 24px 70px rgba(0, 0, 0, .34);
+        --header: rgba(24, 18, 14, .92);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    img { display: block; width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .skip { position: fixed; left: 12px; top: -100px; z-index: 99; background: var(--ink); color: var(--paper); padding: 10px 14px; }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: var(--header);
+      border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+      backdrop-filter: blur(12px);
+    }
+    .nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 700; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--accent); }
+    .nav-call { text-decoration: none; font-weight: 700; color: var(--accent); border-bottom: 1px solid currentColor; }
+    .menu-button { display: none; min-width: 66px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); color: var(--ink); background: transparent; font: inherit; }
+
+    .hero { padding: 44px 0 72px; position: relative; }
+    .hero::before { content: ""; position: absolute; width: 210px; height: 210px; left: -115px; top: 120px; border: 1px solid var(--line); border-radius: 50%; opacity: .65; }
+    .hero-grid { display: grid; grid-template-columns: .93fr 1.07fr; align-items: center; gap: 56px; }
+    .location { display: inline-flex; align-items: center; gap: 9px; color: var(--accent); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .location::before { content: ""; width: 20px; height: 2px; background: currentColor; }
+    h1, h2, h3, blockquote { font-family: "Newsreader", serif; margin-top: 0; }
+    h1 { font-size: clamp(56px, 8vw, 108px); line-height: .86; letter-spacing: -.055em; margin: 22px 0 28px; max-width: 7ch; }
+    .hero-lede { font-size: clamp(18px, 2vw, 22px); line-height: 1.55; color: var(--muted); max-width: 580px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button { display: inline-flex; min-height: 50px; align-items: center; justify-content: center; gap: 10px; padding: 12px 20px; text-decoration: none; font-weight: 700; border: 1px solid var(--ink); }
+    .button.primary { background: var(--ink); color: var(--paper); }
+    .button.secondary { background: transparent; }
+    .button:hover, .button:focus-visible { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .hero-photo { position: relative; min-height: 620px; }
+    .hero-photo img { height: 620px; object-fit: cover; object-position: center; border-radius: 220px 220px 16px 16px; box-shadow: var(--shadow); }
+    .hero-stamp { position: absolute; left: -38px; bottom: 38px; width: 154px; height: 154px; display: grid; place-items: center; text-align: center; border-radius: 50%; color: #fff7ec; background: var(--accent-2); border: 6px solid var(--paper); transform: rotate(-7deg); font-family: "Newsreader", serif; font-size: 21px; line-height: 1.1; }
+
+    section { padding: 92px 0; }
+    .section-head { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: end; margin-bottom: 48px; }
+    h2 { font-size: clamp(42px, 6vw, 72px); line-height: .98; letter-spacing: -.035em; margin-bottom: 0; }
+    .section-copy { color: var(--muted); font-size: 18px; margin: 0; max-width: 620px; }
+    .about { background: var(--ink); color: var(--paper); }
+    .about .section-copy { color: color-mix(in srgb, var(--paper) 78%, transparent); }
+    .about-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid color-mix(in srgb, var(--paper) 25%, transparent); }
+    .about-item { padding: 34px 34px 6px 0; }
+    .about-item + .about-item { padding-left: 34px; border-left: 1px solid color-mix(in srgb, var(--paper) 25%, transparent); }
+    .about-num { font-family: "Newsreader", serif; font-size: 52px; line-height: 1; color: var(--accent-2); }
+    .about-item h3 { font-size: 28px; margin: 16px 0 10px; }
+    .about-item p { color: color-mix(in srgb, var(--paper) 72%, transparent); margin: 0; }
+
+    .menu-board { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 70px; border-top: 2px solid var(--ink); }
+    .menu-row { display: grid; grid-template-columns: 64px 1fr; gap: 20px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .menu-no { color: var(--accent); font-family: "Newsreader", serif; font-size: 28px; }
+    .menu-row h3 { font-size: 30px; margin: 0 0 5px; }
+    .menu-row p { margin: 0; color: var(--muted); }
+    .menu-note { margin-top: 28px; display: flex; justify-content: space-between; align-items: center; gap: 20px; color: var(--muted); }
+    .menu-note a { color: var(--accent); font-weight: 700; text-underline-offset: 4px; }
+
+    .gallery { padding-top: 30px; }
+    .gallery-grid { display: grid; grid-template-columns: 1.05fr .95fr .95fr; grid-template-rows: 260px 260px; gap: 14px; }
+    .gallery-grid figure { margin: 0; overflow: hidden; background: var(--paper-2); }
+    .gallery-grid figure:first-child { grid-row: span 2; }
+    .gallery-grid figure:nth-child(4) { grid-column: span 2; }
+    .gallery-grid img { height: 100%; object-fit: cover; transition: transform .6s ease; }
+    .gallery-grid figure:hover img { transform: scale(1.025); }
+
+    .feedback { background: var(--paper-2); }
+    .feedback-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 74px; align-items: center; }
+    .rating-box { border: 1px solid var(--line); padding: 34px; background: var(--card); box-shadow: 12px 12px 0 var(--accent); }
+    .rating-value { font-family: "Newsreader", serif; font-size: 88px; line-height: .9; letter-spacing: -.06em; }
+    .stars { color: var(--accent); letter-spacing: 5px; font-size: 18px; margin: 14px 0 6px; }
+    .rating-box p { color: var(--muted); margin: 0; }
+    blockquote { font-size: clamp(30px, 4vw, 48px); line-height: 1.16; letter-spacing: -.02em; margin-bottom: 24px; }
+    .feedback-copy p { color: var(--muted); }
+    .sample-label { display: inline-block; margin: 16px 0 10px; padding: 6px 10px; border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+    .sample-quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 0 0 24px; }
+    .sample-quote { margin: 0; padding: 18px 0 0; border-top: 1px solid var(--line); font-family: "Newsreader", serif; font-size: 21px; line-height: 1.35; }
+    .text-link { color: var(--accent); font-weight: 700; text-underline-offset: 5px; }
+
+    .contact { padding-bottom: 54px; }
+    .contact-panel { background: var(--accent-2); color: #fff5ec; padding: 64px; display: grid; grid-template-columns: 1fr .9fr; gap: 60px; align-items: end; }
+    .contact-panel h2 { color: inherit; max-width: 9ch; }
+    .contact-list { display: grid; gap: 20px; }
+    .contact-line { padding-top: 18px; border-top: 1px solid rgba(255,255,255,.28); }
+    .contact-label { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: .09em; opacity: .72; margin-bottom: 6px; }
+    .contact-line a, .contact-line address { color: inherit; font-style: normal; font-size: 18px; font-weight: 600; }
+    .contact-line a { text-underline-offset: 5px; }
+    .hours { margin: 24px 0 0; color: rgba(255,255,255,.78); }
+    footer { padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 24px; border-top: 1px solid var(--line); padding-top: 24px; }
+
+    @media (max-width: 820px) {
+      .wrap { width: min(100% - 28px, 680px); }
+      .menu-button { display: inline-grid; place-items: center; }
+      .nav-call { margin-left: auto; }
+      .nav-links { display: none; position: absolute; top: 68px; left: 0; right: 0; padding: 22px 20px 26px; background: var(--paper); border-bottom: 1px solid var(--line); flex-direction: column; align-items: flex-start; gap: 18px; }
+      .nav-links.open { display: flex; }
+      .hero { padding: 34px 0 60px; }
+      .hero-grid, .section-head, .feedback-grid, .contact-panel { grid-template-columns: 1fr; gap: 36px; }
+      h1 { font-size: clamp(64px, 19vw, 94px); }
+      .hero-photo { min-height: 480px; }
+      .hero-photo img { height: 480px; border-radius: 150px 150px 12px 12px; }
+      .hero-stamp { width: 118px; height: 118px; left: -4px; bottom: 22px; font-size: 17px; }
+      section { padding: 70px 0; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-item, .about-item + .about-item { padding: 26px 0; border-left: 0; border-bottom: 1px solid color-mix(in srgb, var(--paper) 25%, transparent); }
+      .menu-board { grid-template-columns: 1fr; }
+      .menu-note { align-items: flex-start; flex-direction: column; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: 330px 200px 200px; }
+      .gallery-grid figure:first-child { grid-column: span 2; grid-row: auto; }
+      .gallery-grid figure:nth-child(4) { grid-column: span 2; }
+      .contact-panel { padding: 42px 28px; }
+      .sample-quotes { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .nav-call { display: none; }
+      .hero-actions .button { width: 100%; }
+      .hero-photo { min-height: 410px; }
+      .hero-photo img { height: 410px; }
+      .menu-row { grid-template-columns: 44px 1fr; gap: 10px; }
+      .gallery-grid { grid-template-columns: 1fr; grid-template-rows: repeat(4, 240px); }
+      .gallery-grid figure:first-child, .gallery-grid figure:nth-child(4) { grid-column: auto; }
+      .footer-inner { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .gallery-grid img { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="wrap nav-inner">
+      <button class="menu-button" type="button" aria-controls="nav-menu" aria-expanded="false" aria-label="Open menu">Menu</button>
+      <ul class="nav-links" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#feedback">Reviews</a></li>
+        <li><a href="#contact">Visit</a></li>
+      </ul>
+      <a class="nav-call" href="tel:+917985160374">Call +91 79851 60374</a>
+    </div>
+  </nav>
+
+  <main id="main">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="location">Cantonment Road · Lucknow</div>
+          <h1>Sahu Cafe</h1>
+          <p class="hero-lede">Your neighbourhood stop for a warming cup, quick bites and unhurried catch-ups—right near Subham Cinema.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="tel:+917985160374">Call to order <span aria-hidden="true">→</span></a>
+            <a class="button secondary" href="#menu">Explore the menu</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/hero.jpg" alt="A glass of masala chai served with crisp Indian snacks" />
+          <div class="hero-stamp">Open daily<br />9:00–10:30</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>A familiar place, any time of day.</h2>
+          <p class="section-copy">From the first tea of the morning to an evening snack with friends, Sahu Cafe keeps things simple, welcoming and easy to enjoy.</p>
+        </div>
+        <div class="about-grid">
+          <article class="about-item">
+            <div class="about-num">01</div>
+            <h3>Freshly served</h3>
+            <p>Hot drinks and quick bites made for everyday cravings.</p>
+          </article>
+          <article class="about-item">
+            <div class="about-num">02</div>
+            <h3>Easy takeaway</h3>
+            <p>Call ahead when you need a quick pick-up on the go.</p>
+          </article>
+          <article class="about-item">
+            <div class="about-num">03</div>
+            <h3>Open all week</h3>
+            <p>Visit any day from 9:00 AM to 10:30 PM.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Good things for your table.</h2>
+          <p class="section-copy">A café selection built around comforting drinks and convenient bites. Call for today’s full menu, prices and availability.</p>
+        </div>
+        <div class="menu-board">
+          <article class="menu-row"><div class="menu-no">01</div><div><h3>Tea & Chai</h3><p>Classic, warming cups for morning starts and evening breaks.</p></div></article>
+          <article class="menu-row"><div class="menu-no">02</div><div><h3>Coffee</h3><p>Easy café favourites to enjoy in or take away.</p></div></article>
+          <article class="menu-row"><div class="menu-no">03</div><div><h3>Quick Bites</h3><p>Light, savoury snacks when you want something fast and satisfying.</p></div></article>
+          <article class="menu-row"><div class="menu-no">04</div><div><h3>Sweet Pairings</h3><p>A little something to enjoy alongside your favourite cup.</p></div></article>
+        </div>
+        <div class="menu-note"><span>Planning a group order? Ask the team what can be prepared.</span><a href="tel:+917985160374">Call for the current menu</a></div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="gallery-title">A little taste of the mood.</h2>
+          <p class="section-copy">Warm cups, crisp bites and the kind of pause that makes the day feel better.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure><img src="assets/gallery-1.jpg" alt="Chai and crisp snacks arranged in woven baskets" /></figure>
+          <figure><img src="assets/gallery-2.jpg" alt="Tea served with toasted rusks and whole spices" /></figure>
+          <figure><img src="assets/gallery-3.jpg" alt="Tea cups with nuts and savoury biscuits" /></figure>
+          <figure><img src="assets/gallery-4.jpg" alt="Chai with flaky traditional snacks on a wooden counter" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback" id="feedback">
+      <div class="wrap feedback-grid">
+        <div class="rating-box">
+          <div class="rating-value">4.0</div>
+          <div class="stars" aria-label="4 out of 5 stars">★★★★<span aria-hidden="true" style="color:var(--line)">★</span></div>
+          <p>Average rating from 6 public reviews</p>
+        </div>
+        <div class="feedback-copy">
+          <h2>Guest feedback is still growing.</h2>
+          <p>Browse the current public ratings, or share your own experience after your visit.</p>
+          <span class="sample-label">Sample testimonials for this demo</span>
+          <div class="sample-quotes" aria-label="Sample testimonials">
+            <p class="sample-quote">“A comforting chai break and a friendly neighbourhood feel.”</p>
+            <p class="sample-quote">“Simple, quick and just right for an evening snack.”</p>
+          </div>
+          <a class="text-link" href="https://www.justdial.com/Lucknow/Sahu-Cafe-Opposite-Shubham-Cinema-Cantt-Road/0522PX522-X522-161010155850-D3T6_BZDET" target="_blank" rel="noopener noreferrer">View public reviews <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <div class="contact-panel">
+          <div>
+            <h2>Come by for your next chai break.</h2>
+            <p class="hours">Open daily · 9:00 AM–10:30 PM</p>
+          </div>
+          <div class="contact-list">
+            <div class="contact-line"><span class="contact-label">Phone</span><a href="tel:+917985160374">+91 79851 60374</a></div>
+            <div class="contact-line"><span class="contact-label">Email</span><a href="mailto:isofather4@gmail.com">isofather4@gmail.com</a></div>
+            <div class="contact-line"><span class="contact-label">Find us</span><address>Cantonment Road, near Subham Cinema<br />Lucknow, Uttar Pradesh</address></div>
+            <div class="contact-line"><a href="https://www.mappls.com/place-sahu+cafe-cannot+road-lalbagh-lucknow-uttar+pradesh-226001-I45FLP@zdata=MjYuODQ1NDE5KzgwLjkzOSsxNytJNDVGTFArK25yed" target="_blank" rel="noopener noreferrer">Get directions <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner"><span>Sahu Cafe · Lucknow</span><span>Tea, coffee, quick bites & takeaway</span></div>
+  </footer>
+
+  <script>
+    (function () {
+      var button = document.querySelector('.menu-button');
+      var menu = document.getElementById('nav-menu');
+      if (!button || !menu) return;
+      button.addEventListener('click', function () {
+        var isOpen = menu.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(isOpen));
+        button.textContent = isOpen ? 'Close' : 'Menu';
+      });
+      menu.addEventListener('click', function (event) {
+        if (event.target.tagName === 'A') {
+          menu.classList.remove('open');
+          button.setAttribute('aria-expanded', 'false');
+          button.textContent = 'Menu';
+        }
+      });
+    }());
+  </script>
+</body>
+</html>
