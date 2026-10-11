@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>777 Fitness Hub — Train Hard, Stay Humble | Gym in Kochi</title>
+<meta name="description" content="777 Fitness Hub — Kochi's high-energy gym. Strength training, cardio, yoga, personal coaching. First trial session free.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0b; --bg2:#121214; --card:#17171a; --line:#26262b;
+  --volt:#d8ff3e; --volt-dim:#b8dd28; --orange:#ff5a1f;
+  --txt:#f4f4f5; --mut:#a1a1aa;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Anton',sans-serif;letter-spacing:.02em;text-transform:uppercase;line-height:1.02}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+.eyebrow{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--volt);margin-bottom:14px}
+h2.sec{font-size:clamp(2rem,5vw,3.4rem);margin-bottom:14px}
+.sec-sub{color:var(--mut);max-width:640px;font-size:1.02rem;line-height:1.65}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,10,11,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1140px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Anton';font-size:1.35rem;letter-spacing:.04em}
+.logo b{color:var(--volt)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--mut);text-decoration:none;font-size:.9rem;font-weight:600;transition:.2s}
+.nav-links a:hover{color:var(--volt)}
+.btn{display:inline-block;background:var(--volt);color:#0a0a0b;font-weight:800;text-decoration:none;padding:14px 30px;border-radius:6px;font-size:.92rem;letter-spacing:.06em;text-transform:uppercase;transition:.2s;border:none;cursor:pointer}
+.btn:hover{background:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--volt);color:var(--volt)}
+.btn.sm{padding:10px 20px;font-size:.8rem}
+@media(max-width:760px){.nav-links a:not(.btn){display:none}}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding:140px 0 80px;overflow:hidden;
+  background:radial-gradient(900px 480px at 78% 18%,rgba(216,255,62,.10),transparent 60%),
+             radial-gradient(700px 420px at 12% 85%,rgba(255,90,31,.10),transparent 60%),var(--bg)}
+.hero::before{content:"777";position:absolute;right:-30px;top:60px;font-family:'Anton';font-size:clamp(10rem,26vw,24rem);color:transparent;-webkit-text-stroke:1px #232327;line-height:1;user-select:none}
+.hero h1{font-size:clamp(2.8rem,8vw,6.2rem);margin:10px 0 18px}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--volt)}
+.hero p.lead{color:var(--mut);font-size:1.08rem;max-width:560px;line-height:1.7;margin-bottom:30px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-meta{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.hm b{font-family:'Anton';font-size:1.9rem;color:var(--volt);display:block}
+.hm span{color:var(--mut);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase}
+/* MARQUEE */
+.marquee{background:var(--volt);color:#0a0a0b;overflow:hidden;white-space:nowrap;padding:13px 0;transform:rotate(-1deg) scale(1.02)}
+.marquee span{font-family:'Anton';font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;margin:0 26px}
+/* PROGRAMS */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px 26px;transition:.25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);border-color:var(--volt)}
+.card .num{font-family:'Anton';font-size:2.6rem;color:#232327;position:absolute;top:14px;right:20px}
+.card h3{font-size:1.35rem;margin:8px 0 10px}
+.card h3 i{font-style:normal;color:var(--volt)}
+.card p{color:var(--mut);font-size:.93rem;line-height:1.65}
+.tag{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:#232327;border-radius:4px;padding:5px 10px;margin-bottom:6px;color:var(--volt)}
+/* TRAINERS */
+.trainers{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+@media(max-width:860px){.t-grid{grid-template-columns:1fr}}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tface{height:190px;display:flex;align-items:center;justify-content:center;font-family:'Anton';font-size:4rem;color:#2c2c31;background:linear-gradient(135deg,#1b1b1f,#101013)}
+.tcard:nth-child(1) .tface{background:linear-gradient(135deg,#2a2f10,#141507)}
+.tcard:nth-child(2) .tface{background:linear-gradient(135deg,#33150a,#160b06)}
+.tcard:nth-child(3) .tface{background:linear-gradient(135deg,#10262b,#0a1416)}
+.tbody{padding:22px}
+.tbody h3{font-size:1.2rem}
+.tbody span{color:var(--volt);font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.tbody p{color:var(--mut);font-size:.9rem;margin-top:8px;line-height:1.6}
+/* PRICING */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px;align-items:stretch}
+@media(max-width:860px){.price-grid{grid-template-columns:1fr}}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 28px;display:flex;flex-direction:column;transition:.25s}
+.plan.hot{border:2px solid var(--volt);transform:scale(1.04);box-shadow:0 20px 60px rgba(216,255,62,.12)}
+.plan h3{font-size:1.3rem}
+.plan .pr{font-family:'Anton';font-size:2.6rem;margin:14px 0 4px}
+.plan .pr small{font-family:'Inter';font-size:.9rem;color:var(--mut);font-weight:600}
+.plan ul{list-style:none;margin:20px 0 28px;flex:1}
+.plan li{color:var(--mut);font-size:.92rem;padding:9px 0;border-bottom:1px solid var(--line)}
+.plan li::before{content:"✓ ";color:var(--volt);font-weight:800}
+.plan .btn{width:100%;text-align:center}
+/* TIMINGS */
+.time{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.time-row{display:flex;justify-content:space-between;align-items:center;padding:18px 4px;border-bottom:1px solid var(--line);max-width:640px}
+.time-row b{font-family:'Anton';font-size:1.05rem;letter-spacing:.06em}
+.time-row span{color:var(--volt);font-weight:700}
+/* TESTIMONIALS */
+.quotes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+@media(max-width:760px){.quotes{grid-template-columns:1fr}}
+.quote{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px}
+.quote p{font-size:1rem;line-height:1.7;color:#d4d4d8}
+.quote .who{margin-top:16px;color:var(--volt);font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase}
+/* CTA */
+.cta-band{background:linear-gradient(120deg,#1c2008,#0e0f06);border:1px solid #2c3313;border-radius:20px;padding:56px 40px;text-align:center;margin-top:20px}
+.cta-band h2{font-size:clamp(1.8rem,4.5vw,3rem);margin-bottom:12px}
+.cta-band h2 em{font-style:normal;color:var(--volt)}
+.cta-band p{color:var(--mut);margin-bottom:26px}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr}}
+.cbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px}
+.cbox h3{font-size:1.15rem;margin-bottom:12px;color:var(--volt)}
+.cbox p{color:var(--mut);line-height:1.8;font-size:.95rem}
+.cbox a{color:var(--txt);text-decoration:none;font-weight:700}
+.cbox a:hover{color:var(--volt)}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mut);font-size:.85rem}
+.foot-in{max-width:1140px;margin:0 auto;padding:0 22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.demo-note{background:#141507;border:1px dashed #3a4215;color:#c9d66a;font-size:.8rem;border-radius:10px;padding:12px 18px;margin-top:26px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav><div class="nav-in">
+  <div class="logo"><b>777</b> FITNESS HUB</div>
+  <div class="nav-links">
+    <a href="#programs">Programs</a><a href="#trainers">Trainers</a><a href="#pricing">Membership</a><a href="#contact">Contact</a>
+    <a class="btn sm" href="#cta">Free Trial</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Kochi's High-Energy Gym</span>
+  <h1>Train Hard.<br><span class="stroke">Stay Humble.</span><br>Become Unstoppable.</h1>
+  <p class="lead">777 Fitness Hub is where Kochi comes to get stronger. Modern equipment, certified coaches, and a community that pushes you further — whether it's your first workout or your five-hundredth.</p>
+  <div class="hero-cta">
+    <a class="btn" href="#cta">Book Free Trial Session</a>
+    <a class="btn ghost" href="#pricing">View Membership Plans</a>
+  </div>
+  <div class="hero-meta">
+    <div class="hm"><b>2500+</b><span>Active Members</span></div>
+    <div class="hm"><b>15+</b><span>Certified Trainers</span></div>
+    <div class="hm"><b>4.8★</b><span>Google Rating</span></div>
+  </div>
+</div></header>
+
+<div class="marquee"><span>Strength</span>•<span>Cardio</span>•<span>CrossFit</span>•<span>Yoga</span>•<span>Zumba</span>•<span>Personal Training</span>•<span>Nutrition Plans</span>•<span>Strength</span>•<span>Cardio</span>•<span>CrossFit</span>•<span>Yoga</span>•<span>Zumba</span>•</div>
+
+<section id="programs"><div class="wrap">
+  <span class="eyebrow">What we offer</span>
+  <h2 class="sec">Programs Built For<br>Every Body</h2>
+  <p class="sec-sub">No matter your goal — fat loss, muscle gain, or just feeling alive again — there's a program here with your name on it.</p>
+  <div class="grid3">
+    <div class="card"><span class="num">01</span><span class="tag">Most Popular</span><h3>Strength <i>Training</i></h3><p>Free weights, machines, and powerlifting zones with coach-supervised sessions. Build real, lasting muscle with structured progressive programs.</p></div>
+    <div class="card"><span class="num">02</span><span class="tag">Fat Burn</span><h3>Cardio <i>&amp; HIIT</i></h3><p>Treadmills, spin bikes, rowers and high-intensity interval batches that torch calories and build serious stamina.</p></div>
+    <div class="card"><span class="num">03</span><span class="tag">Mind + Body</span><h3>Yoga <i>&amp; Mobility</i></h3><p>Morning yoga batches and guided mobility work to keep you flexible, injury-free, and mentally sharp.</p></div>
+    <div class="card"><span class="num">04</span><span class="tag">1-on-1</span><h3>Personal <i>Coaching</i></h3><p>A dedicated trainer, a custom workout split, and a nutrition plan built around your body and your schedule.</p></div>
+    <div class="card"><span class="num">05</span><span class="tag">Group Energy</span><h3>Zumba <i>&amp; Aerobics</i></h3><p>High-energy group batches with music that makes workouts feel like a party. Great for beginners.</p></div>
+    <div class="card"><span class="num">06</span><span class="tag">Fuel Right</span><h3>Nutrition <i>Plans</i></h3><p>Simple, practical diet charts — vegetarian and non-vegetarian — designed for Indian kitchens and real life.</p></div>
+  </div>
+</div></section>
+
+<section id="trainers" class="trainers"><div class="wrap">
+  <span class="eyebrow">Meet the coaches</span>
+  <h2 class="sec">Trainers Who<br>Actually Care</h2>
+  <p class="sec-sub">Certified, experienced, and allergic to shortcuts. They'll correct your form before they count your reps.</p>
+  <div class="t-grid">
+    <div class="tcard"><div class="tface">AR</div><div class="tbody"><span>Strength Coach</span><h3>Arun R.</h3><p>10+ years in powerlifting and body recomposition. Has coached 500+ transformations.</p></div></div>
+    <div class="tcard"><div class="tface">SN</div><div class="tbody"><span>HIIT &amp; Cardio</span><h3>Sneha N.</h3><p>Functional training specialist. Her 6 AM batch is legendary — and always full.</p></div></div>
+    <div class="tcard"><div class="tface">VK</div><div class="tbody"><span>Yoga &amp; Mobility</span><h3>Vikram K.</h3><p>500-hour certified yoga teacher. Fixes backs, knees, and Monday-morning moods.</p></div></div>
+  </div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+  <span class="eyebrow">Simple pricing</span>
+  <h2 class="sec">Membership That<br>Makes Sense</h2>
+  <p class="sec-sub">No hidden charges. No lock-in traps. Pause anytime you're travelling. First trial session is free.</p>
+  <div class="price-grid">
+    <div class="plan"><h3>Monthly</h3><div class="pr">₹1,500<small>/month</small></div>
+      <ul><li>Full gym floor access</li><li>1 group batch included</li><li>Locker facility</li><li>Diet chart basic</li></ul>
+      <a class="btn ghost" href="#cta">Start Monthly</a></div>
+    <div class="plan hot"><h3>Quarterly ⭐</h3><div class="pr">₹3,600<small>/3 months</small></div>
+      <ul><li>Everything in Monthly</li><li>All group batches</li><li>Personal diet plan</li><li>Monthly body composition check</li></ul>
+      <a class="btn" href="#cta">Start Quarterly</a></div>
+    <div class="plan"><h3>Annual</h3><div class="pr">₹12,000<small>/year</small></div>
+      <ul><li>Everything in Quarterly</li><li>2 personal training sessions</li><li>Guest passes (4/year)</li><li>Priority batch booking</li></ul>
+      <a class="btn ghost" href="#cta">Start Annual</a></div>
+  </div>
+</div></section>
+
+<section id="timings" class="time"><div class="wrap">
+  <span class="eyebrow">When we're open</span>
+  <h2 class="sec">Gym Timings</h2>
+  <div style="margin-top:30px">
+    <div class="time-row"><b>Monday – Saturday</b><span>5:00 AM – 10:00 PM</span></div>
+    <div class="time-row"><b>Sunday</b><span>7:00 AM – 12:00 PM</span></div>
+    <div class="time-row"><b>Yoga Batch</b><span>6:30 AM &amp; 6:00 PM</span></div>
+    <div class="time-row"><b>Zumba Batch</b><span>8:00 AM &amp; 7:00 PM</span></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <span class="eyebrow">Real people, real results</span>
+  <h2 class="sec">Members Love It Here</h2>
+  <div class="quotes">
+    <div class="quote"><p>"I joined for weight loss and stayed for the community. Down 14 kg in 7 months — the trainers genuinely track your progress."</p><div class="who">— Priya M., Member since 2024</div></div>
+    <div class="quote"><p>"Best gym floor in Kochi, hands down. Equipment is modern, it's never overcrowded in morning batches, and the vibe keeps you coming back."</p><div class="who">— Rahul S., Member since 2023</div></div>
+  </div>
+</div></section>
+
+<section id="cta" style="padding-top:20px"><div class="wrap">
+  <div class="cta-band">
+    <h2>Your First Session Is <em>Free.</em></h2>
+    <p>Come train with us once. No card, no commitment — just one great workout.</p>
+    <a class="btn" href="tel:+919847366743">Call +91 98473 66743</a>
+  </div>
+</div></section>
+
+<section id="contact" style="padding-top:20px"><div class="wrap">
+  <span class="eyebrow">Find us</span>
+  <h2 class="sec">Visit The Hub</h2>
+  <div class="contact-grid">
+    <div class="cbox"><h3>📍 Location</h3><p>GAG Centre, Kochi,<br>Kerala<br><br><a href="https://maps.google.com/?q=GAG+Centre+Kochi" target="_blank" rel="noopener">Open in Google Maps →</a></p></div>
+    <div class="cbox"><h3>📞 Get In Touch</h3><p>Phone: <a href="tel:+919847366743">+91 98473 66743</a><br>Email: <a href="mailto:isofather4@gmail.com">isofather4@gmail.com</a><br><br>Walk-ins welcome during all working hours.</p></div>
+  </div>
+  <div class="demo-note">Demo website preview — built for 777 Fitness Hub, Kochi</div>
+</div></section>
+
+<footer><div class="foot-in">
+  <span>© 2026 777 Fitness Hub, Kochi. Train hard, stay humble.</span>
+  <span>Demo site for illustration</span>
+</div></footer>
+
+</body>
+</html>
